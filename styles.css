@@ -15,6 +15,7 @@
   --txt-purple: #6b398e;
   --txt-grey: #6c6c6c;
   --txt-dark-grey: #4e4e4e;
+  --txt-ligther-black: #333333;
   --txt-black: #000;
   --white: #fff;
 
@@ -28,4 +29,64 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.2s linear;
+}
+a {
+  text-decoration: none;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+.fw-500 {
+  font-weight: 500;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+/* Header */
+
+/* Top nav */
+#top-nav {
+  padding: 8px 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+#top-nav a {
+  color: var(--txt-grey);
+}
+
+#top-nav .p-icon {
+  width: 22px;
+  height: 21px;
+}
+#top-nav .e-icon {
+  width: 26px;
+  height: 20px;
+}
+#top-nav .u-icon {
+  width: 18px;
+  height: 19px;
+}
+
+#top-nav .social-wraper a:hover,
+#top-nav .contacts-wraper a:hover,
+#top-nav .faq-wraper a:hover {
+  opacity: 0.9;
+}
+#top-nav .prisijungimas-wraper a {
+  color: var(--txt-ligther-black);
+}
+
+#top-nav .faq-wraper a {
+  color: var(--txt-dark-grey);
+}
+
+#top-nav .language-english {
+  position: absolute;
+  padding: 0 10px;
+  top: 23px;
+  left: 6px;
+  background: var(--white);
 }

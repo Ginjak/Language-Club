@@ -21,15 +21,63 @@
   <body>
     <!-- Header pradzia -->
     <header>
-      <div id="navigation" class="container-xxl">
-        <div class="top-nav">
-          <div class="social-wraper">
-            <a href="/" target="_blank"
-              ><img src="./icons/facebook_icon.svg"
-            /></a>
+      <div id="navigation">
+        <div id="top-nav">
+          <div
+            class="container-xxl d-flex justify-content-between align-items-center"
+          >
+          <div class="prisijungimas-wraper d-flex align-items-center gap-1 d-md-none">
+            <img class="u-icon" src="./icons/user_icon.svg"/><div>
+              <a href="#" class="fs-12">Prisijungti</a>
+              <span class="fs-12">/</span>
+              <a href="#" class="fs-12">Registruotis</a>
+            </div>
           </div>
-          <div class="contacts-wraper"></div>
-          <div class="faq-wraper"></div>
+            <div class="social-wraper d-flex gap-3 d-none d-md-block">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img src="./icons/facebook_icon.svg"
+              /></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><img src="./icons/instagram_icon.svg"
+              /></a>
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><img src="./icons/linkedin_icon.svg"
+              /></a>
+            </div>
+
+            <div class="contacts-wraper gap-3 d-none d-md-flex">
+              <div class="d-flex gap-3 align-items-center">
+                <img src="./icons/phone_icon.svg" class="p-icon" /><a
+                  href="tel:37061863185"
+                  class="fw-600"
+                  >+370 618 63 185</a
+                >
+              </div>
+              <div class="d-flex gap-3 align-items-center">
+                <img src="./icons/envelope_icon.svg" class="e-icon" /><a
+                  href="mailto:info@languageclub.lt5"
+                  class="fw-600"
+                  >info@languageclub.lt</a
+                >
+              </div>
+            </div>
+            <div class="faq-wraper d-flex gap-3">
+              <a href="/" class="text-uppercase fw-500 d-none d-md-block">kontaktai</a>
+              <a href="/" class="text-uppercase fw-500 d-none d-md-block">duk</a>
+              <div
+                class="language-wraper d-flex gap-1 align-items-center position-relative"
+              >
+                <img src="./icons/language_icon.svg" /><a
+                  href="#"
+                  class="text-dark fw-600"
+                  >Lietuvių</a
+                ><img src="./icons/language_arrow_icon.svg" id="select-lng"   />
+                <a
+                href="#"
+                class="text-dark fw-600 language-english d-none"
+                >English</a
+            </div>
+          </div>
         </div>
       </div>
     </header>
