@@ -1,0 +1,31 @@
+:root {
+  --main-purple: #6a398e;
+  --main-light-purple: #bfaacf;
+  --main-orange: #fe715f;
+  --main-ligth-orange: #ff705f;
+  --main-ligth-grey: #f2f2f9;
+  --main-ligther-grey: #f5f5f5;
+  --main-grey: #e7e7e7;
+  --main-grey-custom: #dfdfdf;
+
+  --main-green: #00baaa;
+  --main-green-darker: #00baab;
+  --main-ligth-green: #4ccfc3;
+  --main-green-tab: #4dcfc3;
+  --txt-purple: #6b398e;
+  --txt-grey: #6c6c6c;
+  --txt-dark-grey: #4e4e4e;
+  --txt-black: #000;
+  --white: #fff;
+
+  /* Gradient colors geeen-ligth #00BBAB #A5FFF7*/
+  /* Gradient colors geeen-ligther #34C8BB #34C8BB2E*/
+  /* Gradient colors purple-ligth #1E102800 #6A398E*/
+}
+
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
