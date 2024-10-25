@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Language Club</title>
   </head>
@@ -91,11 +95,13 @@
           class="container-xxl d-flex align-items-center justify-content-between justify-content-md-start gap-1 gap-lg-3 py-34"
         >
           <div class="logo-wraper">
-            <img
-              class="header-logo"
-              src="./logo/LanguageClub-papilldomas-Logo-630x200px.svg"
-              alt="Language Club Logo"
-            />
+            <a href="/">
+              <img
+                class="header-logo"
+                src="./logo/LanguageClub-papilldomas-Logo-630x200px.svg"
+                alt="Language Club Logo"
+              />
+            </a>
           </div>
           <div class="d-none d-md-block search-wraper flex-grow-1">
             <div class="input-group">
@@ -131,7 +137,7 @@
               </div>
             </div>
             <div
-              class="hamburger-menu-toggle-wraper position-relative d-flex align-items-center"
+              class="hamburger-menu-toggle-wraper position-relative d-flex align-items-center d-md-none"
               role="button"
             >
               <div class="ham-line"></div>
@@ -163,7 +169,9 @@
         </div>
       </div>
       <div id="bottom-nav" class="py-28">
-        <div class="close max-w-300 m-auto d-flex justify-content-end">
+        <div
+          class="d-md-none close max-w-300 m-auto d-flex justify-content-end px-4"
+        >
           <button class="btn-close"></button>
         </div>
         <nav class="navbar container-xxl py-0 text-center flex-nowrap">
@@ -195,11 +203,36 @@
       </div>
     </header>
     <!-- Header pabaiga -->
+    <!-- Hero section (slider) pradzia -->
+    <section id="hero" class="position-relative">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./img/Hero_1.webp" alt="Hero image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/Hero_1.webp" alt="Hero image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/Hero_1.webp" alt="Hero image" />
+          </div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- Hero section (slider) pabaiga -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
