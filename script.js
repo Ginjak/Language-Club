@@ -1,3 +1,25 @@
+// Mobile menu toggle
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".hamburger-menu-toggle-wraper");
+  const bottomNav = document.getElementById("bottom-nav");
+  const closeButton = document.querySelector(".close");
+
+  // Apply initial transition style to `bottomNav`
+  bottomNav.style.transition = "top 0.3s linear";
+  bottomNav.style.top = "-100vh"; // Start hidden
+
+  // Show navigation
+  menuToggle.addEventListener("click", () => {
+    bottomNav.style.top = "0";
+  });
+
+  // Hide navigation
+  closeButton.addEventListener("click", () => {
+    bottomNav.style.top = "-100vh";
+  });
+});
+
 // Kalbu pasirinkimas
 document.addEventListener("DOMContentLoaded", function () {
   const selectLng = document.getElementById("select-lng");

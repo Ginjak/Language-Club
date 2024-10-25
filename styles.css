@@ -1,5 +1,6 @@
 :root {
   --main-purple: #6a398e;
+  --main-purple-hover: #7e44a7;
   --main-light-purple: #bfaacf;
   --main-orange: #fe715f;
   --main-ligth-orange: #ff705f;
@@ -35,6 +36,20 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.py-34 {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+.py-28 {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
 .fw-600 {
   font-weight: 600;
 }
@@ -42,8 +57,21 @@ a {
   font-weight: 500;
 }
 
+.fs-20 {
+  font-size: 20px;
+}
+.fs-15 {
+  font-size: 15px;
+}
 .fs-12 {
   font-size: 12px;
+}
+
+.lh-26 {
+  line-height: 26px;
+}
+.lh-20 {
+  line-height: 20px;
 }
 
 /* Header */
@@ -89,4 +117,168 @@ a {
   top: 23px;
   left: 6px;
   background: var(--white);
+}
+
+/* Middle nav */
+/* Search bar */
+#middle-nav .search-bar {
+  border-radius: 42px 0 0 42px;
+  background: var(--main-ligther-grey);
+  border: none;
+  padding: 16px 48px;
+}
+#middle-nav .search-bar::placeholder {
+  color: #919191;
+  font-size: 24px;
+  font-weight: 500;
+}
+#middle-nav .search-bar:focus,
+#middle-nav #search-btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(106, 57, 142, 0.6);
+}
+#middle-nav #search-btn:focus {
+  z-index: 2;
+  border: none;
+  outline: none;
+}
+#middle-nav #search-btn {
+  width: 90px;
+  border-radius: 0 42px 42px 0;
+  background: var(--main-purple);
+  border: none;
+  padding: 13px 29px;
+  z-index: 2;
+}
+#middle-nav #search-btn:hover {
+  background: var(--main-purple-hover);
+}
+
+#middle-nav .paskyra-txt-wraper,
+#middle-nav .paskyra-txt-wraper a,
+#middle-nav .paskyra-txt-wraper a:visited {
+  color: var(--txt-ligther-black);
+}
+
+#middle-nav .paskyra-txt-wraper a:hover {
+  color: var(--txt-black);
+}
+
+#middle-nav .user-cart-wraper .user-icon {
+  max-width: 40px;
+}
+
+#middle-nav .user-cart-wraper .product-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  background: var(--main-purple);
+  border-radius: 50%;
+  color: var(--white);
+  text-align: center;
+}
+#middle-nav .user-cart-wraper:hover .product-count {
+  background: var(--main-purple-hover);
+}
+#middle-nav .user-cart-wraper .cart-wraper {
+  cursor: pointer;
+}
+#middle-nav .user-cart-wraper .cart-wraper:hover svg path {
+  fill: var(--txt-dark-grey);
+}
+
+#bottom-nav {
+  background: #f2f2f9;
+}
+.navbar a {
+  color: var(--txt-dark-grey) !important;
+}
+.navbar a:hover {
+  color: var(--txt-purple) !important;
+}
+.navbar a.link.active {
+  color: var(--txt-purple) !important;
+}
+/* Hamburger menu */
+
+.hamburger-menu-toggle-wraper {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.hamburger-menu-toggle-wraper .ham-line {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--txt-ligther-black);
+}
+
+.hamburger-menu-toggle-wraper .ham-line:before,
+.hamburger-menu-toggle-wraper .ham-line:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--txt-ligther-black);
+}
+.hamburger-menu-toggle-wraper .ham-line:before {
+  top: -10px;
+}
+
+.hamburger-menu-toggle-wraper .ham-line:after {
+  top: 10px;
+}
+/* Media queries */
+
+@media (max-width: 1200px) {
+  #middle-nav .logo-wraper img {
+    max-width: 200px;
+  }
+  #middle-nav .search-bar {
+    padding: 12px 32px;
+  }
+  #middle-nav .paskyra-wraper .user-icon {
+    max-width: 30px;
+  }
+  #middle-nav .paskyra-wraper .paskyra-txt-wraper .fs-20 {
+    font-size: 16px;
+  }
+  #middle-nav .paskyra-wraper .paskyra-txt-wraper .lh-26 {
+    line-height: 18px;
+  }
+  #middle-nav .paskyra-wraper .paskyra-txt-wraper .fs-15 {
+    font-size: 14px;
+  }
+  #middle-nav .paskyra-wraper .paskyra-txt-wraper .lh-20 {
+    line-height: 14px;
+  }
+  .navbar a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  #middle-nav .user-cart-wraper svg {
+    max-width: 28px;
+  }
+  #middle-nav .user-cart-wraper .product-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    top: 0;
+    right: -5px;
+  }
+  #bottom-nav {
+    position: absolute;
+    top: -100vh;
+    width: 100%;
+    height: 100vh;
+  }
 }
