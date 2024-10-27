@@ -20,6 +20,7 @@
   --txt-ligther-black: #333333;
   --txt-black: #000;
   --white: #fff;
+  --txt-comment: #535353;
 
   /* Gradient colors geeen-ligth #00BBAB #A5FFF7*/
   /* Gradient colors geeen-ligther #34C8BB #34C8BB2E*/
@@ -65,6 +66,12 @@ ul {
 .fs-96 {
   font-size: 96px;
 }
+.fs-75 {
+  font-size: 75px;
+}
+.fs-40 {
+  font-size: 40px;
+}
 .fs-32 {
   font-size: 32px;
 }
@@ -81,6 +88,9 @@ ul {
   font-size: 12px;
 }
 
+.lh-32 {
+  line-height: 32px;
+}
 .lh-26 {
   line-height: 26px;
 }
@@ -112,6 +122,25 @@ ul {
 }
 .btn-orange:hover {
   background: var(--main-ligth-orange-hover);
+}
+
+.btn-comment {
+  position: relative;
+  padding: 36px 50px;
+  background: var(--main-light-purple);
+  display: inline-block;
+  border-radius: 10px 10px 0 10px;
+  margin: 0;
+}
+.btn-comment:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid var(--main-light-purple);
+  border-left: 20px solid transparent;
+  right: 0;
+  bottom: -20px;
 }
 
 /* Header */
@@ -380,11 +409,40 @@ ul {
 
 /* Kodel mes section */
 
+/* Kreiptis orannge bar section */
+#kreiptis-orange-bar {
+  padding-top: 60px;
+}
 /* Atsiliepimai section */
+#comments {
+  padding: 60px 0;
+}
 .kreiptis-bar {
   background: var(--main-ligth-orange);
   border-radius: 10px;
   padding: 15px 50px;
+}
+
+#comments .btn-comment {
+  color: var(--txt-purple);
+}
+
+.comments-wraper {
+  color: var(--txt-comment);
+  padding-top: 40px;
+}
+
+.comments-wraper .img-quote {
+  position: absolute;
+}
+.comments-wraper .img-avatar {
+  margin-top: 45px;
+  width: 152px;
+  margin-left: 33px;
+  height: 152px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 /* Media queries */
@@ -421,6 +479,13 @@ ul {
     padding-top: 18px;
     padding-bottom: 18px;
   }
+
+  #kreiptis-orange-bar .kreiptis-bar .fs-32 {
+    font-size: 24px;
+  }
+  .btn-small {
+    font-size: 20px;
+  }
 }
 @media (max-width: 992px) {
   .navbar a {
@@ -434,6 +499,9 @@ ul {
   }
   .hero-slider .swiper-btn-wraper {
     display: block;
+  }
+  #comments .fs-75 {
+    font-size: 60px;
   }
 }
 @media (max-width: 768px) {
@@ -504,5 +572,56 @@ ul {
 
   .hero-slider .swiper-btn-wraper {
     display: none;
+  }
+
+  .comments-wraper .img-avatar {
+    margin: 0;
+  }
+  .comments-wraper .comment-content {
+    margin-top: -30px;
+  }
+}
+
+@media (max-width: 576px) {
+  #kreiptis-orange-bar .kreiptis-bar {
+    padding: 16px 20px;
+  }
+  #kreiptis-orange-bar .kreiptis-bar .fs-32 {
+    font-size: 15px;
+  }
+  .btn-small {
+    font-size: 14px;
+  }
+  #comments .btn-comment {
+    display: block;
+    padding: 14px 28px;
+  }
+  #comments .fs-75 {
+    font-size: 48px;
+  }
+
+  .comments-wraper .comment-content {
+    margin-top: -20px;
+  }
+  .comments-wraper .img-avatar {
+    width: 138px;
+    height: 138px;
+  }
+  .comments-wraper .img-quote {
+    width: 41px;
+    top: 80px;
+  }
+  .comments-wraper .comment-user.fs-40 {
+    font-size: 24px;
+  }
+  .comments-wraper .comment-title.fs-32 {
+    font-size: 16px;
+  }
+  .comments-wraper .fs-24 {
+    font-size: 15px;
+  }
+  .comments-wraper .lh-32 {
+    font-size: 15px;
+    line-height: 20px;
   }
 }
