@@ -15,6 +15,7 @@
   --main-green-darker: #00baab;
   --main-ligth-green: #4ccfc3;
   --main-green-tab: #4dcfc3;
+  --main-banner-txt: #3dcabe;
   --txt-purple: #6b398e;
   --txt-grey: #6c6c6c;
   --txt-dark-grey: #4e4e4e;
@@ -49,6 +50,9 @@ ul {
   margin: 0;
 }
 
+.color-green {
+  color: var(--main-banner-txt);
+}
 .font-family-serif {
   font-family: "IBM Plex Serif", serif;
 }
@@ -76,6 +80,9 @@ ul {
 }
 .fs-75 {
   font-size: 75px;
+}
+.fs-65 {
+  font-size: 65px;
 }
 .fs-40 {
   font-size: 40px;
@@ -115,8 +122,19 @@ ul {
 .max-w-780 {
   max-width: 780px;
 }
+.max-w-780 {
+  max-width: 780px;
+}
 .max-w-300 {
   max-width: 300px;
+}
+
+.gradient-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 30%, #000 100%);
+  border-radius: 50px;
 }
 
 .btn-small {
@@ -469,7 +487,7 @@ ul {
 /* Musu paslaugos section */
 
 #musu-paslaugos {
-  padding: 60px 0;
+  padding: 60px 0 80px 0;
   background: var(--main-section-grey);
 }
 
@@ -522,6 +540,49 @@ ul {
   bottom: -19px;
 }
 
+/* Musu klientai */
+#musu-klientai {
+  padding: 60px 0;
+}
+#musu-klientai .musu-klientai-banner {
+  height: 692px;
+}
+
+#musu-klientai .musu-klientai-banner .banner-content {
+  margin-bottom: 45px;
+}
+#musu-klientai .banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50px;
+}
+#musu-klientai .banner-txt {
+  font-size: 34px;
+  line-height: 48px;
+}
+#musu-klientai .banner-txt .fs-65 {
+  line-height: 79px;
+}
+#musu-klientai .txt-highlight {
+  z-index: 1;
+}
+#musu-klientai .txt-highlight::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url("/img/Asset\ 5201\ 1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -21px;
+  top: -39px;
+  display: block;
+  width: 162px;
+  height: 133px;
+  z-index: -1;
+}
 /* Media queries */
 
 @media (max-width: 1200px) {
@@ -662,6 +723,9 @@ ul {
   .hero-slider .swiper-btn-wraper {
     display: none;
   }
+  .kreiptis-bar {
+    padding: 25px 50px;
+  }
 
   .comments-wraper .img-avatar {
     margin: 0;
@@ -687,6 +751,34 @@ ul {
     left: 5%;
     bottom: -42px;
     z-index: 1;
+  }
+  #musu-klientai .container-xxl {
+    padding: 0;
+  }
+  #musu-klientai .banner-img,
+  #musu-klientai .musu-klientai-banner {
+    border-radius: 0;
+    height: 355px;
+  }
+  #musu-klientai .gradient-overlay {
+    border-radius: 0;
+  }
+  #musu-klientai .txt-highlight::before {
+    left: -32px;
+    top: -33px;
+    width: 106px;
+    height: 93px;
+  }
+  #musu-klientai .banner-content .fs-65 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  #musu-klientai .banner-txt {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  #musu-klientai .max-w-780 {
+    max-width: 480px;
   }
 }
 
@@ -740,6 +832,7 @@ ul {
   }
   #musu-paslaugos {
     padding-top: 30px;
+    padding-bottom: 60px;
   }
   #musu-paslaugos .fs-80 {
     font-size: 40px;
@@ -750,5 +843,23 @@ ul {
   }
   #musu-paslaugos .card img {
     height: 280px;
+  }
+
+  #musu-klientai .txt-highlight::before {
+    left: -25px;
+    top: -26px;
+    width: 74px;
+    height: 67px;
+  }
+  #musu-klientai .banner-content .fs-65 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  #musu-klientai .banner-txt {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #musu-klientai .max-w-780 {
+    max-width: 300px;
   }
 }
