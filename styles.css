@@ -152,7 +152,7 @@ ul {
   border-radius: 10px 10px 0 10px;
   margin: 0;
 }
-.btn-comment:before {
+.btn-comment::before {
   content: "";
   position: absolute;
   right: 0;
@@ -304,8 +304,8 @@ ul {
   background: var(--txt-ligther-black);
 }
 
-.hamburger-menu-toggle-wraper .ham-line:before,
-.hamburger-menu-toggle-wraper .ham-line:after {
+.hamburger-menu-toggle-wraper .ham-line::before,
+.hamburger-menu-toggle-wraper .ham-line::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -313,7 +313,7 @@ ul {
   border-radius: 10px;
   background: var(--txt-ligther-black);
 }
-.hamburger-menu-toggle-wraper .ham-line:before {
+.hamburger-menu-toggle-wraper .ham-line::before {
   top: -10px;
 }
 
@@ -335,7 +335,7 @@ ul {
   max-width: 1440px;
   margin: auto;
 }
-.hero-slider .swiper-slide:before {
+.hero-slider .swiper-slide::before {
   content: "";
   position: absolute;
   top: 0;
@@ -371,12 +371,13 @@ ul {
   position: relative;
   overflow: hidden;
 }
-.hero-slider .txt-highlight:before {
+.hero-slider .txt-highlight::before {
   content: "";
+  position: absolute;
+  display: block;
   background: url("/img/Asset\ 5301\ 1.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
   width: 110%;
   height: 60px;
   left: -5%;
@@ -475,12 +476,13 @@ ul {
 #musu-paslaugos .txt-highlight {
   position: relative;
 }
-#musu-paslaugos .txt-highlight:before {
+#musu-paslaugos .txt-highlight::before {
   content: "";
+  position: absolute;
+  display: block;
   background: url("/img/Asset\ 4501\ 1.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
   width: 105%;
   height: 55px;
   left: -5%;
@@ -497,6 +499,9 @@ ul {
 }
 #musu-paslaugos .card img {
   border-radius: 25px 25px 0 0;
+  height: 332px;
+  object-fit: cover;
+  object-position: top center;
 }
 
 #musu-paslaugos .card-body {
@@ -506,7 +511,7 @@ ul {
   color: var(--txt-purple);
 }
 
-#musu-paslaugos .card-body:before {
+#musu-paslaugos .card-body::before {
   content: "";
   position: absolute;
   right: 0;
@@ -558,6 +563,9 @@ ul {
   .btn-small.fs-26 {
     font-size: 20px;
   }
+  #musu-paslaugos .card-body .fs-40 {
+    font-size: 32px;
+  }
 }
 @media (max-width: 992px) {
   .navbar a {
@@ -566,7 +574,7 @@ ul {
   .hero-slider .fs-96 {
     font-size: 72px;
   }
-  .hero-slider .txt-highlight:before {
+  .hero-slider .txt-highlight::before {
     bottom: -26px;
   }
   .hero-slider .swiper-btn-wraper {
@@ -579,9 +587,7 @@ ul {
   #musu-paslaugos .card-body {
     padding: 30px;
   }
-  #musu-paslaugos .card-body .fs-40 {
-    font-size: 32px;
-  }
+
   #musu-paslaugos .card-body .fs-28 {
     font-size: 24px;
   }
@@ -628,9 +634,10 @@ ul {
     position: relative;
     /* overflow: hidden; */
   }
-  .hero-slider .txt-highlight-mobile:before {
-    position: absolute;
+  .hero-slider .txt-highlight-mobile::before {
     content: "";
+    position: absolute;
+    display: block;
     background: url("/img/Asset\ 5301\ 1.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -640,7 +647,7 @@ ul {
     width: 95%;
     height: 30px;
   }
-  .hero-slider .txt-highlight:before {
+  .hero-slider .txt-highlight::before {
     display: none;
   }
   .hero-slider .slide-text p.fs-24 {
@@ -665,15 +672,16 @@ ul {
   #musu-paslaugos .fs-80 {
     font-size: 60px;
   }
-  #musu-paslaugos .txt-highlight:before {
+  #musu-paslaugos .txt-highlight::before {
     display: none;
   }
-  #musu-paslaugos .title-highligth:before {
+  #musu-paslaugos .title-highligth::before {
     content: "";
+    position: absolute;
+    display: block;
     background: url("/img/purple_snake_mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
     width: 94%;
     height: 58px;
     left: 5%;
@@ -736,8 +744,11 @@ ul {
   #musu-paslaugos .fs-80 {
     font-size: 40px;
   }
-  #musu-paslaugos .title-highligth:before {
+  #musu-paslaugos .title-highligth::before {
     width: 95%;
     height: 39px;
+  }
+  #musu-paslaugos .card img {
+    height: 280px;
   }
 }
