@@ -566,10 +566,10 @@ ul {
 #musu-klientai .banner-txt .fs-65 {
   line-height: 79px;
 }
-#musu-klientai .txt-highlight {
+#musu-klientai .musu-klientai-banner .txt-highlight {
   z-index: 1;
 }
-#musu-klientai .txt-highlight::before {
+#musu-klientai .musu-klientai-banner .txt-highlight::before {
   content: "";
   position: absolute;
   display: block;
@@ -582,6 +582,14 @@ ul {
   width: 162px;
   height: 133px;
   z-index: -1;
+}
+
+/* Musu klientai logo */
+#musu-klientai .klientai-wraper .orange-highligth {
+  position: absolute;
+  left: -16px;
+  bottom: -35px;
+  width: 331px;
 }
 /* Media queries */
 
@@ -733,7 +741,8 @@ ul {
   .comments-wraper .comment-content {
     margin-top: -30px;
   }
-  #musu-paslaugos .fs-80 {
+  #musu-paslaugos .fs-80,
+  #musu-klientai .fs-80 {
     font-size: 60px;
   }
   #musu-paslaugos .txt-highlight::before {
@@ -763,7 +772,7 @@ ul {
   #musu-klientai .gradient-overlay {
     border-radius: 0;
   }
-  #musu-klientai .txt-highlight::before {
+  #musu-klientai .musu-klientai-banner .txt-highlight::before {
     left: -32px;
     top: -33px;
     width: 106px;
@@ -779,6 +788,15 @@ ul {
   }
   #musu-klientai .max-w-780 {
     max-width: 480px;
+  }
+  #musu-klientai .orange-highligth {
+    display: none;
+  }
+  #musu-klientai .orange-highligth-mobile {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 103%;
   }
 }
 
@@ -834,7 +852,8 @@ ul {
     padding-top: 30px;
     padding-bottom: 60px;
   }
-  #musu-paslaugos .fs-80 {
+  #musu-paslaugos .fs-80,
+  #musu-klientai .fs-80 {
     font-size: 40px;
   }
   #musu-paslaugos .title-highligth::before {
@@ -845,7 +864,7 @@ ul {
     height: 280px;
   }
 
-  #musu-klientai .txt-highlight::before {
+  #musu-klientai .musu-klientai-banner .txt-highlight::before {
     left: -25px;
     top: -26px;
     width: 74px;
@@ -861,5 +880,8 @@ ul {
   }
   #musu-klientai .max-w-780 {
     max-width: 300px;
+  }
+  #musu-klientai .orange-highligth-mobile {
+    bottom: -27px;
   }
 }
