@@ -585,14 +585,88 @@ ul {
 }
 
 /* Musu klientai logo */
+#musu-klientai .klientai-wraper {
+  margin-bottom: 77px;
+}
 #musu-klientai .klientai-wraper .orange-highligth {
   position: absolute;
   left: -16px;
   bottom: -35px;
   width: 331px;
 }
-/* Media queries */
 
+#brands {
+  margin-top: 60px;
+}
+#brands .swiper-wrapper {
+  align-items: center;
+}
+#brands .swiper-slide {
+  max-height: 90px;
+}
+#brands .swiper-slide img {
+  object-fit: contain;
+  width: 100%;
+}
+
+/* Footer */
+
+footer {
+  background: var(--txt-purple);
+  padding: 120px 0 36px;
+}
+
+footer .kreiptis-footer-bar {
+  border-radius: 10px;
+  padding: 35px 50px;
+  background: linear-gradient(to right, #00bbab, #a5fff7);
+  max-width: 1440px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: -77px;
+  transform: translateX(-50%);
+}
+
+footer .bar-btn {
+  padding: 12px 62px;
+  background: linear-gradient(to right, #cc68f0, #8c3aaa);
+  border-radius: 13px;
+  color: var(--white);
+}
+footer .bar-btn:hover {
+  box-shadow: 0 0 2px 5px rgba(140, 58, 170, 0.2);
+}
+
+footer .footer-main-content {
+  padding-bottom: 140px;
+}
+footer .footer-social a:hover,
+footer .footer-contacts a:hover,
+footer ul a:hover {
+  opacity: 0.7;
+  color: var(--white);
+}
+footer .footer-contacts a {
+  color: var(--white);
+}
+
+footer .footer-contacts .img-wraper {
+  width: 38px;
+}
+footer ul a {
+  color: var(--white);
+}
+/* Media queries */
+@media (max-width: 1440px) {
+  footer .kreiptis-footer-bar {
+    left: 0;
+    right: 0;
+    transform: none;
+    margin: 0 12px;
+    width: calc(100% - 24px);
+  }
+}
 @media (max-width: 1200px) {
   #middle-nav .logo-wraper img {
     max-width: 200px;
@@ -635,6 +709,9 @@ ul {
   #musu-paslaugos .card-body .fs-40 {
     font-size: 32px;
   }
+  footer .fs-40 {
+    font-size: 32px;
+  }
 }
 @media (max-width: 992px) {
   .navbar a {
@@ -659,6 +736,18 @@ ul {
 
   #musu-paslaugos .card-body .fs-28 {
     font-size: 24px;
+  }
+  footer .footer-logo img {
+    max-width: 239px;
+  }
+  footer .footer-social img {
+    max-width: 36px;
+  }
+  footer .footer-contacts .img-wraper img {
+    max-width: 30px;
+  }
+  footer .fs-24 {
+    font-size: 18px;
   }
 }
 @media (max-width: 768px) {
@@ -798,6 +887,13 @@ ul {
     bottom: -40px;
     width: 103%;
   }
+  footer .kreiptis-footer-bar {
+    padding: 30px;
+    top: -60px;
+  }
+  footer .fs-40 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -883,5 +979,37 @@ ul {
   }
   #musu-klientai .orange-highligth-mobile {
     bottom: -27px;
+  }
+  #brands {
+    margin-top: 40px;
+  }
+  footer {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+  footer .footer-main-content {
+    padding-bottom: 48px;
+  }
+  footer .bar-btn {
+    padding: 12px;
+  }
+  footer .kreiptis-footer-bar {
+    padding: 12px;
+    top: -39px;
+  }
+  footer .fs-40 {
+    font-size: 20px;
+  }
+  footer .bar-btn.fs-40 {
+    font-size: 15px;
+  }
+  footer .footer-social img {
+    max-width: 25px;
+  }
+  footer .footer-contacts .img-wraper img {
+    max-width: 24px;
+  }
+  footer .fs-24 {
+    font-size: 16px;
   }
 }

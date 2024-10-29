@@ -42,6 +42,35 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+var brandSwiper = new Swiper("#brands", {
+  loop: true,
+  slidesPerView: 7,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    480: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 7,
+      spaceBetween: 30,
+    },
+  },
+});
+
 // Kalbu pasirinkimas
 document.addEventListener("DOMContentLoaded", function () {
   const selectLng = document.getElementById("select-lng");
@@ -69,3 +98,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Footer current year
+function displayCurrentYear() {
+  const currentYear = new Date().getFullYear(); // Get the current year
+  const elements = document.querySelectorAll(".current-year"); // Select all elements with the class 'current-year'
+
+  // Update the text content of each selected element
+  elements.forEach((element) => {
+    element.textContent = currentYear;
+  });
+}
+displayCurrentYear();
