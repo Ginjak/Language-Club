@@ -386,20 +386,13 @@ ul {
 }
 
 .hero-slider .txt-highlight {
-  position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
-.hero-slider .txt-highlight::before {
-  content: "";
-  position: absolute;
-  display: block;
-  background: url("/img/Asset\ 5301\ 1.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 110%;
-  height: 60px;
-  left: -5%;
-  bottom: -12px;
+.hero-slider img.txt-highlight-img {
+  position: absolute !important;
+  width: 363px;
+  left: -10px;
+  bottom: -47px;
   z-index: -1;
 }
 
@@ -491,22 +484,13 @@ ul {
   background: var(--main-section-grey);
 }
 
-#musu-paslaugos .txt-highlight {
-  position: relative;
-}
-#musu-paslaugos .txt-highlight::before {
-  content: "";
+#musu-paslaugos img.txt-highlight-img {
   position: absolute;
-  display: block;
-  background: url("/img/Asset\ 4501\ 1.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 105%;
-  height: 55px;
-  left: -5%;
-  bottom: -48px;
-  z-index: 1;
+  left: -27px;
+  bottom: -50px;
+  width: 423px;
 }
+
 #musu-paslaugos h2 {
   margin-bottom: 120px;
 }
@@ -569,18 +553,12 @@ ul {
 #musu-klientai .musu-klientai-banner .txt-highlight {
   z-index: 1;
 }
-#musu-klientai .musu-klientai-banner .txt-highlight::before {
-  content: "";
+#musu-klientai .musu-klientai-banner .txt-highlight img {
   position: absolute;
-  display: block;
-  background: url("/img/Asset\ 5201\ 1.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
   left: -21px;
   top: -39px;
   display: block;
   width: 162px;
-  height: 133px;
   z-index: -1;
 }
 
@@ -720,9 +698,11 @@ footer ul a {
   .hero-slider .fs-96 {
     font-size: 72px;
   }
-  .hero-slider .txt-highlight::before {
-    bottom: -26px;
+  .hero-slider img.txt-highlight-img {
+    width: 276px;
+    bottom: -34px;
   }
+
   .hero-slider .swiper-btn-wraper {
     display: block;
   }
@@ -792,22 +772,13 @@ footer ul a {
     position: relative;
     /* overflow: hidden; */
   }
-  .hero-slider .txt-highlight-mobile::before {
-    content: "";
+  .hero-slider img.txt-highlight-img-mobile {
     position: absolute;
-    display: block;
-    background: url("/img/Asset\ 5301\ 1.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    left: 3%;
-    bottom: -15px;
-    display: block;
-    width: 95%;
-    height: 30px;
+    left: 5px;
+    bottom: -26px;
+    width: 165px;
   }
-  .hero-slider .txt-highlight::before {
-    display: none;
-  }
+
   .hero-slider .slide-text p.fs-24 {
     font-size: 16px;
     font-weight: 400;
@@ -834,22 +805,12 @@ footer ul a {
   #musu-klientai .fs-80 {
     font-size: 60px;
   }
-  #musu-paslaugos .txt-highlight::before {
-    display: none;
+  #musu-klientai .musu-klientai-banner .txt-highlight img {
+    left: -36px;
+    top: -36px;
+    width: 110px;
   }
-  #musu-paslaugos .title-highligth::before {
-    content: "";
-    position: absolute;
-    display: block;
-    background: url("/img/purple_snake_mobile.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 94%;
-    height: 58px;
-    left: 5%;
-    bottom: -42px;
-    z-index: 1;
-  }
+
   #musu-klientai .container-xxl {
     padding: 0;
   }
@@ -861,11 +822,10 @@ footer ul a {
   #musu-klientai .gradient-overlay {
     border-radius: 0;
   }
-  #musu-klientai .musu-klientai-banner .txt-highlight::before {
-    left: -32px;
-    top: -33px;
-    width: 106px;
-    height: 93px;
+  #musu-klientai .musu-klientai-banner .txt-highlight img {
+    left: -25px;
+    top: -22px;
+    width: 70px;
   }
   #musu-klientai .banner-content .fs-65 {
     font-size: 40px;
@@ -952,9 +912,11 @@ footer ul a {
   #musu-klientai .fs-80 {
     font-size: 40px;
   }
-  #musu-paslaugos .title-highligth::before {
-    width: 275px;
-    height: 39px;
+  #musu-paslaugos img.txt-highlight-img {
+    position: absolute;
+    left: -95px;
+    bottom: -30px;
+    width: 276px;
   }
   #musu-paslaugos .card img {
     height: 280px;
