@@ -21,55 +21,56 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Swiper
+if (typeof Swiper !== "undefined") {
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    loop: true,
 
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        pagination: false,
+      },
+    },
+  });
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      pagination: false,
+  var brandSwiper = new Swiper("#brands", {
+    loop: true,
+    slidesPerView: 7,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
     },
-  },
-});
 
-var brandSwiper = new Swiper("#brands", {
-  loop: true,
-  slidesPerView: 7,
-  spaceBetween: 30,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    320: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+    breakpoints: {
+      320: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      480: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 7,
+        spaceBetween: 30,
+      },
     },
-    480: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-    768: {
-      slidesPerView: 5,
-      spaceBetween: 40,
-    },
-    1024: {
-      slidesPerView: 7,
-      spaceBetween: 30,
-    },
-  },
-});
+  });
+}
 
 // Kalbu pasirinkimas
 document.addEventListener("DOMContentLoaded", function () {
