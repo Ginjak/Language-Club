@@ -49,7 +49,36 @@ ul {
   padding: 0;
   margin: 0;
 }
+.bg-purple {
+  background: #734595;
+}
 
+.bg-gradient-purple {
+  background: linear-gradient(to right, #734595, rgba(115, 69, 149, 0.2));
+}
+.bg-orange {
+  background: var(--main-ligth-orange);
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(
+    to right,
+    var(--main-ligth-orange),
+    rgba(255, 112, 95, 0.2)
+  );
+}
+
+.bg-green {
+  background: var(--main-green-tab);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(
+    to right,
+    var(--main-green-tab),
+    rgba(77, 207, 195, 0.2)
+  );
+}
 .color-green {
   color: var(--main-banner-txt);
 }
@@ -166,7 +195,16 @@ ul {
   color: var(--white);
   font-weight: 600;
 }
-.btn-small:hover {
+
+.btn-normal {
+  display: block;
+  border-radius: 10px;
+  padding: 16px 45px;
+  color: var(--white);
+  font-weight: 600;
+}
+.btn-small:hover,
+.btn-normal:hover {
   color: var(--white);
 }
 .btn-orange {
@@ -204,6 +242,25 @@ ul {
   height: 20px;
   background: var(--main-light-purple);
   bottom: -19px;
+}
+
+.btn-tab-purple {
+  background: #734595;
+}
+.btn-tab-purple:hover {
+  background: #513068;
+}
+.btn-tab-orange {
+  background: #ff705f;
+}
+.btn-tab-orange:hover {
+  background: #e45343;
+}
+.btn-tab-green {
+  background: #4dcfc3;
+}
+.btn-tab-green:hover {
+  background: #3c9e94;
 }
 
 /* Header */
@@ -835,6 +892,62 @@ footer ul a {
   bottom: -35px;
 }
 
+/* Kursai section */
+#kursai .tabs {
+  margin-top: 40px;
+}
+#kursai .tabs-wraper .nav-link {
+  font-family: "IBM Plex Serif", serif;
+  font-style: italic;
+  font-size: 70px;
+  color: var(--white);
+  border-radius: 25px 0 0 25px;
+  padding: 20px;
+  line-height: 1;
+  transition: all 0.2s linear;
+  position: relative;
+  z-index: 1;
+}
+#kursai .tabs-wraper .nav-link.active {
+  transform: scale(1.1);
+}
+#kursai .tabs-wraper .nav-link:hover {
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+}
+.tab-pane {
+  position: relative;
+  border-radius: 25px;
+  z-index: 2;
+}
+.tab-content-wraper {
+  padding: 32px;
+}
+.tab-content,
+.tab-content-info {
+  flex: 1;
+}
+
+.tab-content-wraper .img-wraper {
+  max-width: 420px;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.tab-content-wraper .img-wraper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 25px;
+}
+.tab-content-txt-wraper p {
+  gap: 10px;
+}
+
+.tab-content-txt-wraper span {
+  flex: 1;
+}
 /* Media queries */
 @media (max-width: 1440px) {
   footer .kreiptis-footer-bar {
@@ -893,6 +1006,10 @@ footer ul a {
   .post .img-wraper {
     max-height: 100%;
   }
+  .tab-content-txt-wraper p span:first-child {
+    font-weight: 700;
+    font-size: 18px;
+  }
 }
 @media (max-width: 1100px) {
   #apie-kursus .nemokas-testas {
@@ -946,6 +1063,52 @@ footer ul a {
   }
   .category .fs-28 {
     font-size: 22px;
+  }
+
+  #apie-kursus .nemokas-testas {
+    margin-bottom: 185px !important;
+  }
+  .tab-content-wraper .img-wraper {
+    max-width: 100%;
+    max-height: 420px;
+    border-radius: 25px;
+  }
+  #kursai .bg-gradient-purple {
+    background: linear-gradient(to bottom, #734595, rgba(115, 69, 149, 0.2));
+  }
+  #kursai .bg-gradient-orange {
+    background: linear-gradient(
+      to bottom,
+      var(--main-ligth-orange),
+      rgba(255, 112, 95, 0.2)
+    );
+  }
+  #kursai .bg-gradient-green {
+    background: linear-gradient(
+      to bottom,
+      var(--main-green-tab),
+      rgba(77, 207, 195, 0.2)
+    );
+  }
+  #kursai .container-xxl {
+    padding: 0;
+  }
+  #kursai .tab-pane {
+    border-radius: 0;
+  }
+  #kursai .tabs-wraper {
+    border-radius: 0;
+  }
+  #kursai .tabs {
+    margin-top: -110px;
+    margin-left: 12px;
+  }
+  #kursai .tabs-wraper .nav-link {
+    border-radius: 25px 25px 0 0;
+    padding: 10px 30px;
+  }
+  #apie-kursus .content-wraper {
+    padding-bottom: 160px;
   }
 }
 @media (max-width: 768px) {
@@ -1137,7 +1300,7 @@ footer ul a {
     font-weight: 500 !important;
   }
   #apie-kursus .nemokas-testas {
-    margin-bottom: 165px !important;
+    margin-bottom: 80px !important;
   }
   #apie-kursus .man-img {
     right: 85px;
@@ -1290,9 +1453,6 @@ footer ul a {
   }
   #apie-kursus .btn-comment {
     padding: 24px;
-  }
-  #apie-kursus .nemokas-testas {
-    margin-bottom: 185px !important;
   }
 
   #apie-kursus .fs-48 {

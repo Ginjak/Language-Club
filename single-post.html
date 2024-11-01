@@ -327,7 +327,137 @@
     <!-- Kursai section pradzia -->
     <section id="kursai">
       <div class="container-xxl">
-        <p class="bg-primary">asdasdasd</p>
+        <div class="tabs-wraper d-flex flex-column flex-lg-row">
+        <div class="tabs">
+          <ul class="nav d-flex flex-row flex-lg-column" id="myTab" role="tablist">
+            <li class=" role="presentation">
+              <a
+                class="nav-link active bg-purple"
+                id="pirmas-kursas"
+                data-bs-toggle="tab"
+                href="#pirmo-kurso-info"
+                role="tab"
+                aria-controls="pirmas-kursas"
+                aria-selected="true"
+                >1</a
+              >
+            </li>
+            <li class=" role="presentation">
+              <a
+                class="nav-link bg-orange"
+                id="antras-kursas"
+                data-bs-toggle="tab"
+                href="#antro-kurso-info"
+                role="tab"
+                aria-controls="antras-kursas"
+                aria-selected="true"
+                >2</a
+              >
+            </li>
+            <li class=" role="presentation">
+              <a
+                class="nav-link bg-green"
+                id="trecias-kursas"
+                data-bs-toggle="tab"
+                href="#trecio-kurso-info"
+                role="tab"
+                aria-controls="trecias-kursas"
+                aria-selected="true"
+                >2</a
+              >
+            </li>
+            
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div class="tab-content" id="kursai-content">
+            <div
+              class="tab-pane  show active bg-gradient-purple"
+              id="pirmo-kurso-info"
+              role="tabpanel"
+              aria-labelledby="pirmas-kursas"
+            >
+            <div class="tab-content-wraper d-flex gap-4 flex-column flex-lg-row">
+              <div class="img-wraper">
+                <img src="./img/kursas_img.webp" alt="">
+              </div>
+              <div class="tab-content-info text-black d-flex flex-column justify-content-between">
+                
+                <div class="tab-content-txt-wraper d-flex flex-column gap-1 gap-xl-3">
+                  <h5 class="fw-bold fs-40 mb-2">Trumpa informacija</h5>
+                <p class="mb-0 d-flex flex-column gap-1 flex-xl-row justify-content-between fs-24 fw-normal"><span>Kurso trukmė</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt=""> 40-50 ak. val. (apie tris mėnesius)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Pamokų skaičius per savaitę</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">2 kartus per savaitę po 2 ak.val. (90 min.)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Pamokų laikas</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Nuo 7:30 val. iki 20:30 val.</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Lygis</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Starter (A1) - Advanced (C2)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Grupės dydis</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Iki 6 asmenų</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Formatas</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">„Online“ arba kontaktiniu būdu</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Kaina</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">330-400 EUR</span></p>
+              </div>
+              <div class="d-inline-flex mt-3">
+                <a href="#" class="btn-normal btn-tab-purple fs-28">Kreiptis</a>
+              </div>
+              </div>
+            </div>              
+            </div>
+            <div
+              class="tab-pane  bg-gradient-orange"
+              id="antro-kurso-info"
+              role="tabpanel"
+              aria-labelledby="atras-kursas"
+            >
+            <div class="tab-content-wraper d-flex gap-4 flex-column flex-lg-row">
+              <div class="img-wraper">
+                <img src="./img/kursas_img.webp" alt="">
+              </div>
+              <div class="tab-content-info text-black d-flex flex-column justify-content-between">
+                
+                <div class="tab-content-txt-wraper d-flex flex-column gap-1 gap-xl-3">
+                  <h5 class="fw-bold fs-40 mb-2">Trumpa informacija</h5>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Kurso trukmė</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">40-50 ak. val. (apie tris mėnesius)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Pamokų skaičius per savaitę</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">2 kartus per savaitę po 2 ak.val. (90 min.)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Pamokų laikas</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Nuo 7:30 val. iki 20:30 val.</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Lygis</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Starter (A1) - Advanced (C2)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Grupės dydis</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Iki 6 asmenų</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Formatas</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">„Online“ arba kontaktiniu būdu</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Kaina</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">330-400 EUR</span></p>
+              </div>
+              <div class="d-inline-flex mt-3">
+                <a href="#" class="btn-normal btn-tab-orange  fs-28">Kreiptis</a>
+              </div>
+              </div>
+            </div>  
+            </div>
+            <div
+              class="tab-pane  bg-gradient-green"
+              id="trecio-kurso-info"
+              role="tabpanel"
+              aria-labelledby="trecias-kursas"
+            >
+            <div class="tab-content-wraper d-flex gap-4 flex-column flex-lg-row">
+              <div class="img-wraper">
+                <img src="./img/kursas_img.webp" alt="">
+              </div>
+              <div class="tab-content-info text-black d-flex flex-column justify-content-between">
+                
+                <div class="tab-content-txt-wraper d-flex flex-column gap-1 gap-xl-3">
+                  <h5 class="fw-bold fs-40 mb-2">Trumpa informacija</h5>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Kurso trukmė</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">40-50 ak. val. (apie tris mėnesius)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Pamokų skaičius per savaitę</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">2 kartus per savaitę po 2 ak.val. (90 min.)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Pamokų laikas</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Nuo 7:30 val. iki 20:30 val.</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Lygis</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Starter (A1) - Advanced (C2)</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Grupės dydis</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">Iki 6 asmenų</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Formatas</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">„Online“ arba kontaktiniu būdu</span></p>
+                <p class="mb-0 d-flex justify-content-between fs-24 fw-normal flex-column gap-1 flex-xl-row"><span>Kaina</span><span class="d-flex gap-2"><img class="d-xl-none" src="./icons/list_icon.svg" alt="">330-400 EUR</span></p>
+              </div>
+              <div class="d-inline-flex mt-3">
+                <a href="#" class="btn-normal btn-tab-green fs-28">Kreiptis</a>
+              </div>
+              </div>
+            </div>  
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
     <!-- Kursai section pabaiga -->
