@@ -268,7 +268,9 @@
     <section id="categories">
       <div class="container-xxl">
         <div class="categories-wraper">
-          <div class="category position-relative p-28 d-flex gap-3">
+          <div
+            class="category position-relative p-28 d-flex flex-column flex-md-row gap-4"
+          >
             <div class="comment-tail"></div>
             <img
               class="category-logo"
@@ -278,9 +280,20 @@
             <div class="img-wraper position-relative">
               <img src="./img/category_img.webp" alt="" />
             </div>
-            <div class="category-content">
-              <h5>Anglų kalbos kursai <span>suaugusiems</span></h5>
-              <a href="#" class="btn-small">Daugiau</a>
+            <div
+              class="category-content d-flex flex-column gap-4 gap-md-5 gap-lg-4"
+            >
+              <h5 class="fs-48 fw-normal font-family-serif mb-0">
+                Anglų kalbos kursai
+                <span class="fw-600 font-family-serif">suaugusiems</span>
+              </h5>
+              <div>
+                <a
+                  href="#"
+                  class="btn-small btn-orange d-inline-block border-0 fs-28 fw-bold"
+                  >Daugiau</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -290,7 +303,7 @@
     <!-- Categories section pabaiga -->
 
     <!-- Footer pradzia -->
-    <!-- <footer class="position-relative">
+    <footer class="position-relative">
       <div class="container-xxl">
         <div
           class="kreiptis-footer-bar d-flex justify-content-between align-items-center"
@@ -375,7 +388,7 @@
           </p>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- Footer pabaiga -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
