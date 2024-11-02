@@ -1466,4 +1466,29 @@ footer ul a {
   #apie-kursus .fs-70 {
     font-size: 28px;
   }
+  #apie-kursus .content-wraper {
+    padding-bottom: 140px;
+  }
+  #kursai .tabs-wraper .nav-link {
+    font-size: 48px;
+  }
+  #kursai .tab-content-wraper {
+    padding: 16px 12px 24px 12px;
+  }
+  #kursai .tab-content-wraper .img-wraper,
+  #kursai .tab-content-wraper .img-wraper img {
+    max-height: 200px !important;
+    min-height: 100%;
+  }
+  #kursai .tab-content-txt-wraper .fs-40 {
+    font-size: 32px;
+  }
+  #kursai .tab-content-txt-wraper p span:first-child,
+  #kursai .tab-content-txt-wraper p {
+    font-size: 16px;
+  }
+  #kursai .tab-content-info .btn-normal.fs-28 {
+    font-size: 15px;
+    padding: 12px 32px;
+  }
 }
