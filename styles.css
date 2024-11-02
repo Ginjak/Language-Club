@@ -12,6 +12,7 @@
   --main-grey-custom: #dfdfdf;
   --cart-message-grey: #f6f5f8;
   --cart-input-txt-grey: #b2aeae;
+  --cart-input-placeholder-grey: #858585;
   --cart-input-bg-grey: #efeded;
   --cart-border-grey: #dbdde1;
   --cart-message-green: #00baac;
@@ -1028,6 +1029,90 @@ footer ul a {
   font-size: 20px;
 }
 
+#pirkejo-duomenys {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+#pirkejo-duomenys .pirkejas {
+  border-bottom: 1px solid var(--cart-border-grey);
+}
+
+.btn-radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-radio input[type="radio"],
+.btn-radio input[type="checkbox"] {
+  display: none;
+}
+
+.radio-btn,
+input[type="checkbox"] + .radio-btn {
+  min-width: 18px;
+  height: 18px;
+  border: 1px solid var(--txt-black);
+  border-radius: 50%;
+  position: relative;
+  margin-right: 15px;
+  transition: background-color 0.3s;
+}
+
+input[type="checkbox"] + .radio-btn {
+  border-radius: 0;
+}
+
+.btn-radio input:checked + .radio-btn,
+.btn-radio input[type="checkbox"]:checked + .radio-btn {
+  background-color: var(--main-purple);
+}
+
+.custom-input {
+  border: 2px solid var(--cart-border-grey);
+  border-radius: 10px;
+  padding: 12px 22px;
+  width: 100%;
+  flex: 1;
+  color: var(--txt-black);
+}
+
+.custom-input::placeholder {
+  color: var(--cart-input-placeholder-grey);
+  font-size: 20px;
+}
+.custom-input:focus,
+.custom-input:focus-visible,
+.custom-input:active {
+  outline: none;
+  box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.1);
+}
+textarea.custom-input {
+  min-height: 140px;
+}
+#pirkejo-duomenys .vardas-pavarde,
+#pirkejo-duomenys .email-tel,
+#pirkejo-duomenys .salis-miestas,
+#pirkejo-duomenys .adresas-pasto-kodas {
+  flex: 1;
+}
+#pirkejo-duomenys .pirkejo-adresas,
+#pirkejo-duomenys .pirkejo-pastabos,
+#pirkejo-duomenys .mokejimas {
+  border-bottom: 1px solid var(--cart-border-grey);
+}
+
+#pirkejo-duomenys .pirkejo-pastabos label {
+  color: var(--cart-input-placeholder-grey);
+}
+
+#pirkejo-duomenys .pirkimo-salygos a {
+  color: var(--txt-purple);
+}
+#pirkejo-duomenys .pirkimo-salygos a:hover {
+  opacity: 0.8;
+}
 /* Media queries */
 @media (max-width: 1440px) {
   footer .kreiptis-footer-bar {
@@ -1421,6 +1506,9 @@ footer ul a {
   #cart .btn-cart-transparent {
     font-size: 16px;
   }
+  #pirkejo-duomenys {
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1643,6 +1731,33 @@ footer ul a {
   }
   #cart {
     padding-bottom: 80px;
+  }
+  #pirkejo-duomenys {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  #pirkejo-duomenys .fs-32 {
+    font-size: 20px;
+  }
+  #pirkejo-duomenys .pirkejas,
+  #pirkejo-duomenys .pirkejo-adresas {
+    border-bottom: none;
+  }
+  #pirkejo-duomenys .mokejimas img {
+    max-width: 123px;
+  }
+  #pirkejo-duomenys .fs-20 {
+    font-size: 16px;
+  }
+  #pirkejo-duomenys .pirkejo-pastabos label.fs-20 {
+    font-size: 20px;
+  }
+  #pirkejo-duomenys .btn-small {
+    font-size: 20px;
+    width: 100%;
+  }
+  .custom-input::placeholder {
+    font-size: 16px;
   }
 }
 

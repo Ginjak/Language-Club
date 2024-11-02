@@ -111,3 +111,12 @@ function displayCurrentYear() {
   });
 }
 displayCurrentYear();
+
+// Textarea expansion
+
+const textarea = document.getElementById("pastabos");
+
+textarea.addEventListener("input", () => {
+  textarea.style.height = "auto";
+  textarea.style.height = `${textarea.scrollHeight}px`;
+});
