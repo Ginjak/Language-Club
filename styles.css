@@ -170,6 +170,9 @@ ul {
 .max-w-913 {
   max-width: 913px;
 }
+.max-w-913 {
+  max-width: 913px;
+}
 .max-w-891 {
   max-width: 891px;
 }
@@ -597,6 +600,7 @@ ul {
 #kreiptis-orange-bar {
   padding-top: 60px;
 }
+
 /* Atsiliepimai section */
 #comments {
   padding: 60px 0;
@@ -1136,6 +1140,65 @@ textarea.custom-input {
   text-decoration: underline;
   text-underline-offset: 2px;
   color: var(--cart-input-placeholder-grey);
+}
+#kreiptis-orange-bar.paskyra-page {
+  margin-bottom: 60px;
+}
+#kreiptis-orange-bar.paskyra-page a {
+  color: var(--white);
+}
+#kreiptis-orange-bar.paskyra-page a:hover {
+  opacity: 0.9;
+}
+
+#duk {
+  padding-top: 30px;
+  padding-bottom: 200px;
+  background: var(--main-section-grey);
+}
+#duk h2.fs-80 {
+  margin-bottom: 80px;
+}
+#duk .txt-highlight-img {
+  position: absolute;
+  left: -80px;
+  bottom: -38px;
+}
+
+#duk-accordion .accordion-item {
+  background: linear-gradient(to right, #734595, rgba(115, 69, 149, 0.3));
+  border: none;
+  border-radius: 10px;
+}
+#duk-accordion .accordion-button,
+#duk-accordion .accordion-item:last-of-type .accordion-button.collapsed {
+  background: transparent;
+  padding: 26px 30px 26px 60px;
+  border-radius: 10px;
+}
+#duk-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: none;
+}
+#duk-accordion .accordion-button::after {
+  content: "+";
+  text-align: center;
+  font-weight: 600;
+  background-image: none;
+  height: 55px;
+  width: 55px;
+  background: var(--txt-purple);
+  border-radius: 10px;
+}
+#duk-accordion .accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+#duk-accordion .accordion-button:not(.collapsed)::after {
+  content: "-";
+}
+
+#duk .accordion-body {
+  padding: 16px 90px 40px 60px;
 }
 
 /* Media queries */
