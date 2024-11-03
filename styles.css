@@ -167,6 +167,9 @@ ul {
   line-height: 20px;
 }
 
+.max-w-913 {
+  max-width: 913px;
+}
 .max-w-891 {
   max-width: 891px;
 }
@@ -1061,7 +1064,9 @@ input[type="checkbox"] + .radio-btn {
 }
 
 input[type="checkbox"] + .radio-btn {
-  border-radius: 0;
+  border-radius: 4px;
+  border: 1px solid var(--cart-border-grey);
+  background: var(--white);
 }
 
 .btn-radio input:checked + .radio-btn,
@@ -1113,6 +1118,26 @@ textarea.custom-input {
 #pirkejo-duomenys .pirkimo-salygos a:hover {
   opacity: 0.8;
 }
+
+#registracija {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+#registracijos-forma {
+  padding: 70px;
+  border-radius: 20px;
+  background: var(--main-section-grey);
+}
+#registracijos-forma .btn-radio span {
+  color: var(--cart-input-placeholder-grey);
+}
+#registracijos-forma a.keisti-slapt {
+  padding-left: 33px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--cart-input-placeholder-grey);
+}
+
 /* Media queries */
 @media (max-width: 1440px) {
   footer .kreiptis-footer-bar {
@@ -1757,6 +1782,28 @@ textarea.custom-input {
     width: 100%;
   }
   .custom-input::placeholder {
+    font-size: 16px;
+  }
+  #registracija {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  #registracija .container-xxl {
+    padding: 0;
+  }
+
+  #registracija .fs-48 {
+    font-size: 32px;
+  }
+
+  #registracijos-forma {
+    padding: 24px 12px;
+    border-radius: 0;
+  }
+  #registracijos-forma .fs-20 {
+    font-size: 16px;
+  }
+  #registracijos-forma .btn-small {
     font-size: 16px;
   }
 }

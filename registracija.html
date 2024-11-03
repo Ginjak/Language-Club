@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
 
     <link rel="stylesheet" href="./styles.css" />
     <title>Language Club</title>
@@ -200,205 +204,123 @@
       </div>
     </header>
     <!-- Header pabaiga -->
-
-    <!-- Pirkejo duomenys pradzia -->
-    <section id="pirkejo-duomenys">
+    <!-- Registracija pradzia -->
+    <section id="registracija">
       <div class="container-xxl">
-        <h5 class="pirkejas fs-32 fw-normal pb-0 pb-sm-4 mb-3 mb-sm-4">
-          Pirkėjo duomenys:
-        </h5>
-        <form>
+        <h1 class="fs-48 fw-normal text-center mb-4 mb-sm-5">Registracija</h1>
+        <form
+          action=""
+          id="registracijos-forma"
+          class="max-w-913 m-auto d-flex flex-column gap-4"
+        >
+          <label
+            for="vardas"
+            class="visually-hidden"
+            aria-label="Vardas"
+          ></label>
+          <input
+            type="text"
+            class="custom-input"
+            placeholder="Vardas"
+            id="vardas"
+            required
+          />
+
+          <input
+            type="text"
+            class="custom-input"
+            placeholder="Pavarde"
+            id="pavarde"
+            required
+          />
+          <label
+            for="gimimo-data"
+            class="visually-hidden"
+            aria-label="Gimimo data"
+          ></label>
+          <input
+            type="text"
+            id="gimimo-data"
+            class="custom-input"
+            placeholder="Gimimo data"
+            required
+          />
+          <label
+            for="email"
+            class="visually-hidden"
+            aria-label="El. pastas"
+          ></label>
+          <input
+            type="email"
+            class="custom-input"
+            placeholder="El. paštas"
+            id="email"
+            required
+          />
+          <label
+            for="tel"
+            class="visually-hidden"
+            aria-label="Telefono Nr."
+          ></label>
+          <input
+            type="tel"
+            class="custom-input"
+            placeholder="Tel. nr."
+            id="tel"
+            required
+          />
+          <label
+            for="adresas"
+            class="visually-hidden"
+            aria-label="Adresas"
+          ></label>
+          <input
+            type="text"
+            class="custom-input"
+            placeholder="Adresas"
+            id="adresas"
+            required
+          />
+          <label
+            for="imones-pavadinimas"
+            class="visually-hidden"
+            aria-label="Imones pavadinimas"
+          ></label>
+          <input
+            type="text"
+            class="custom-input"
+            placeholder="Darbovietės pavadinimas (jei mokymus organizuoja darbovietė)"
+            id="imones-pavadinimas"
+          />
+          <label class="btn-radio fs-20 mb-0">
+            <input type="checkbox" name="rinkodara" value="rinkodara" />
+            <span class="radio-btn"></span>
+            <span class="fs-20"
+              >sutinku, kad mano duomenys būti naudojami LC rinkodaros
+              tikslais, gauti man pritaikytus pasiūlymus, kvietimus dalyvauti
+              apklausose, žaidimuose bei loterijose
+            </span>
+          </label>
           <div
-            class="fizinis-juridinis-wraper d-flex flex-column flex-sm-row gap-2 gap-sm-5 mb-3 mb-sm-5"
+            class="slaptazodis-saugoti-wraper d-flex justify-content-between align-items-center mt-4"
           >
-            <label class="btn-radio fs-20 mb-0">
-              <input type="radio" name="options" value="fizinis" checked />
-              <span class="radio-btn"></span>
-              Fizinis
-            </label>
-            <label class="btn-radio fs-20 mb-0">
-              <input type="radio" name="options" value="juridinis" />
-              <span class="radio-btn"></span>
-              Juridinis
-            </label>
-          </div>
-          <div
-            class="pirkejo-duomenys d-flex gap-3 flex-column flex-lg-row mb-3 mb-sm-5"
-          >
-            <div class="vardas-pavarde d-flex flex-column flex-sm-row gap-3">
-              <label
-                for="vardas"
-                class="visually-hidden"
-                aria-label="Vardas"
-              ></label>
-              <input
-                type="text"
-                class="custom-input"
-                placeholder="Vardas"
-                id="vardas"
-              />
-              <label
-                for="pavarde"
-                class="visually-hidden"
-                aria-label="Pavarde"
-              ></label>
-              <input
-                type="text"
-                class="custom-input"
-                placeholder="Pavardė"
-                id="pavarde"
-              />
-            </div>
-            <div class="email-tel d-flex flex-column flex-sm-row gap-3">
-              <label
-                for="email"
-                class="visually-hidden"
-                aria-label="El. pastas"
-              ></label>
-              <input
-                type="email"
-                class="custom-input"
-                placeholder="El. paštas"
-                id="email"
-              />
-              <label
-                for="tel"
-                class="visually-hidden"
-                aria-label="Telefono Nr."
-              ></label>
-              <input
-                type="tel"
-                class="custom-input"
-                placeholder="Telefonas (pvz.: +37066622333)"
-                id="tel"
-              />
+            <a href="#" class="keisti-slapt fw-normal">Keisti slaptažodį</a>
+            <div>
+              <button
+                type="submit"
+                href="#"
+                clbuttom
+                type="submit"
+                class="btn-small btn-deep-purple text-center fs-24 fw-normal border-0"
+              >
+                Išsaugoti
+              </button>
             </div>
           </div>
-          <div
-            class="pirkejo-adresas d-flex gap-3 flex-column flex-lg-row px-0 pb-sm-5 mb-3 mb-sm-4"
-          >
-            <div class="salis-miestas d-flex flex-column flex-sm-row gap-3">
-              <label
-                for="salis"
-                class="visually-hidden"
-                aria-label="Salis"
-              ></label>
-              <input
-                type="text"
-                class="custom-input"
-                placeholder="Šalis"
-                id="salis"
-              />
-              <label
-                for="miestas"
-                class="visually-hidden"
-                aria-label="Miestas"
-              ></label>
-              <input
-                type="text"
-                class="custom-input"
-                placeholder="Miestas"
-                id="miestas"
-              />
-            </div>
-            <div
-              class="adresas-pasto-kodas d-flex flex-column flex-sm-row gap-3"
-            >
-              <label
-                for="adresas"
-                class="visually-hidden"
-                aria-label="Adresas"
-              ></label>
-              <input
-                type="text"
-                class="custom-input"
-                placeholder="Adresas"
-                id="adresas"
-              />
-              <label
-                for="pasto-kodas"
-                class="visually-hidden"
-                aria-label="Pasto kodas"
-              ></label>
-              <input
-                type="text"
-                class="custom-input"
-                placeholder="Pašto kodas"
-                id="pasto-kodas"
-              />
-            </div>
-          </div>
-          <div class="pirkejo-pastabos pb-3 pb-sm-5 mb-3 mb-sm-4">
-            <label for="pastabos" class="fs-20 mb-3" aria-label="Pastabos"
-              >Pirkėjo pastabos</label
-            >
-            <textarea
-              name="pastabos"
-              id="pastabos"
-              class="custom-input"
-            ></textarea>
-          </div>
-          <div class="mokejimo-budas d-flex flex-column">
-            <h5 class="fs-32 fw-normal mb-3 mb-sm-5">
-              Pasirinkite mokėjimo būda
-            </h5>
-            <div
-              class="mokejimas d-flex flex-column gap-3 gap-sm-4 pb-3 pb-sm-5 mb-3 mb-sm-4"
-            >
-              <label class="btn-radio fs-20 mb-0">
-                <input type="radio" name="mokejimas" value="paysera" />
-                <span class="radio-btn"></span>
-                <img src="./logo/Paysera_logo.svg" alt="" />
-              </label>
-              <label class="btn-radio fs-20 mb-0">
-                <input type="radio" name="mokejimas" value="pavedimas" />
-                <span class="radio-btn"></span>
-                Atsiskaityti už prekes bankiniu pavedimu
-              </label>
-            </div>
-          </div>
-          <div class="pirkimo-salygos d-flex flex-column">
-            <h5 class="fs-32 fw-normal mb-3 mb-sm-5">Pirkimo sąlygos</h5>
-            <div class="salygos d-flex flex-column gap-3 gap-sm-4 mb-4 mb-sm-5">
-              <label class="btn-radio fs-20 mb-0">
-                <input
-                  type="checkbox"
-                  name="taisykles"
-                  value="taisykles"
-                  required
-                />
-                <span class="radio-btn"></span>
-                <span
-                  >Sutinku su
-                  <a href="#"> paslaugų pirkimo-pardavimo taisyklėmis</a>
-                </span>
-              </label>
-              <label class="btn-radio fs-20 mb-0">
-                <input
-                  type="checkbox"
-                  name="taisykles"
-                  value="grazinimas"
-                  required
-                />
-                <span class="radio-btn"></span>
-                <span
-                  >Sutinku su
-                  <a href="#"> grąžinimo sąlygomis </a>
-                </span>
-              </label>
-            </div>
-          </div>
-          <button
-            type="submit"
-            class="btn-small btn-deep-purple text-center fs-24 fw-normal border-0"
-          >
-            Apmokėti
-          </button>
         </form>
       </div>
     </section>
-    <!-- Pirkejo duomenys pabaiga -->
-
+    <!-- Registracija pabaiga -->
     <!-- Footer pradzia -->
     <footer class="position-relative">
       <div class="container-xxl">
@@ -490,6 +412,10 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#gimimo-data", {});
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>
