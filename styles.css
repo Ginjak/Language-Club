@@ -1141,6 +1141,10 @@ textarea.custom-input {
   text-underline-offset: 2px;
   color: var(--cart-input-placeholder-grey);
 }
+
+#paskyra {
+  padding-top: 60px;
+}
 #kreiptis-orange-bar.paskyra-page {
   margin-bottom: 60px;
 }
@@ -1153,7 +1157,7 @@ textarea.custom-input {
 
 #duk {
   padding-top: 30px;
-  padding-bottom: 200px;
+  padding-bottom: 140px;
   background: var(--main-section-grey);
 }
 #duk h2.fs-80 {
@@ -1597,6 +1601,28 @@ textarea.custom-input {
   #pirkejo-duomenys {
     padding-top: 20px;
   }
+  #duk h2.fs-80 {
+    font-size: 60px;
+  }
+  #duk .title-highligth img {
+    max-width: 250px;
+    left: -36px;
+    bottom: -26px;
+  }
+  #duk-accordion h2 .fs-40 {
+    font-size: 32px;
+  }
+  #duk-accordion .fs-24 {
+    font-size: 20px;
+  }
+  #duk-accordion .accordion-button::after {
+    height: 44px;
+    width: 44px;
+    padding-top: 2px;
+  }
+  #duk-accordion .accordion-button:not(.collapsed)::after {
+    padding-top: 0px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1868,6 +1894,23 @@ textarea.custom-input {
   }
   #registracijos-forma .btn-small {
     font-size: 16px;
+  }
+  #duk {
+    padding-bottom: 80px;
+  }
+  #duk-accordion h2 .fs-40 {
+    font-size: 24px;
+  }
+  #duk-accordion .fs-24 {
+    font-size: 16px;
+  }
+  #duk-accordion .accordion-button::after {
+    font-size: 32px;
+  }
+  #duk-accordion .accordion-button,
+  #duk-accordion .accordion-item:last-of-type .accordion-button.collapsed,
+  #duk .accordion-body {
+    padding: 16px 18px 16px 18px;
   }
 }
 

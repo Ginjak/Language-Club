@@ -209,7 +209,81 @@
 
     <section id="paskyra">
       <div class="container-xxl">
-        <h1 class="fs-48 fw-normal text-center mb-4 mb-sm-5">Registracija</h1>
+        <h1 class="fs-48 fw-normal text-center mb-4 mb-sm-5">Paskyra</h1>
+        <div class="duomenys-mokymai-wraper d-flex">
+          <div class="duomenys">
+            <h5 class="fs-40 fw-normal">Vardas Pavardė</h5>
+            <div class="nustatymo-lygiai">
+              <p class="fs-32 fw-light">Nustatytas lygis</p>
+              <p class="fs-20"><span>Anglų kalba:</span><span class="fw-bold">C2</span></p>
+              <p class="fs-20"><span>Prancūzų kalba:</span><span class="fw-bold">A2</span></p>
+            </div>
+            <div class="tabs-wraper">
+              <div class="tabs">
+                <ul class="nav d-flex flex-row flex-lg-column" id="profilio-menu" role="tablist">
+                  <li  role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="redaguoti-profili"
+                      data-bs-toggle="tab"
+                      href="#profilio-info"
+                      role="tab"
+                      aria-controls="redaguoti-profili"
+                      aria-selected="true"
+                      >Redaguoti profilį</a
+                    >
+                  </li>
+                  <li class="" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="mano-uzsakymai"
+                      data-bs-toggle="tab"
+                      href="#uzsakymu-info"
+                      role="tab"
+                      aria-controls="mano-uzsakymai"
+                      aria-selected="false"
+                      >Mano užsakymai</a
+                    >
+                  </li>
+                  <li class=" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="mano-mokytojai"
+                      data-bs-toggle="tab"
+                      href="#mokytoju-info"
+                      role="tab"
+                      aria-controls="mano-mokytojai"
+                      aria-selected="true"
+                      >Mano mokytojai</a
+                    >
+                  </li>
+                  
+                </ul>
+                <!-- <ul class="nav nav-tabs" id="myTab" role="tablist"> -->
+  <!-- <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+  </li> -->
+  <!-- <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+  </li> -->
+  <!-- <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+  </li> -->
+<!-- </ul> -->
+              </div>
+            </div>
+            <a href="#">Atsijungti</a>
+
+          </div>
+         <div class="tabs-content-wraper">
+          <div class="tab-content" id="profilio-menu-info">
+            <div class="tab-pane fade show active" id="profilio-info" role="tabpanel" aria-labelledby="redaguoti-profili">Pirmas</div>
+            <div class="tab-pane fade" id="uzsakymu-info" role="tabpanel" aria-labelledby="mano-uzsakymai">Antras</div>
+            <div class="tab-pane fade" id="mokytoju-info" role="tabpanel" aria-labelledby="mano-mokytojai">Trecias</div>
+          </div>
+          </div>
+         </div>
+        </div>
       </div>
     </section>
     <!-- Paskyra pabaiga -->
@@ -218,7 +292,7 @@
     <div id="kreiptis-orange-bar" class="paskyra-page">
       <div class="container-xxl">
         <div
-          class="kreiptis-bar d-flex flex-column flex-lg-row justify-content-between align-items-center gap-4 gap-lg-3"
+          class="kreiptis-bar d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 gap-md-4 gap-lg-3"
         >
           <p class="text-white text-center text-lg-start fs-32 fw-light m-0">
             Turite klausimų?
