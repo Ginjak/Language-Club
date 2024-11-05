@@ -22,6 +22,7 @@
   --main-ligth-green: #4ccfc3;
   --main-green-tab: #4dcfc3;
   --main-banner-txt: #3dcabe;
+  --paskyra-btn-hover-green: #03baa7;
   --txt-purple: #6b398e;
   --txt-grey: #6c6c6c;
   --txt-dark-grey: #4e4e4e;
@@ -135,6 +136,9 @@ ul {
 .fs-40 {
   font-size: 40px;
 }
+.fs-36 {
+  font-size: 36px;
+}
 .fs-32 {
   font-size: 32px;
 }
@@ -149,6 +153,9 @@ ul {
 }
 .fs-20 {
   font-size: 20px;
+}
+.fs-16 {
+  font-size: 16px;
 }
 .fs-15 {
   font-size: 15px;
@@ -184,6 +191,9 @@ ul {
 }
 .max-w-300 {
   max-width: 300px;
+}
+.max-w-245 {
+  max-width: 245px;
 }
 
 .gradient-overlay {
@@ -1135,11 +1145,16 @@ textarea.custom-input {
 #registracijos-forma .btn-radio span {
   color: var(--cart-input-placeholder-grey);
 }
-#registracijos-forma a.keisti-slapt {
-  padding-left: 33px;
+a.link-with-underline {
   text-decoration: underline;
   text-underline-offset: 2px;
   color: var(--cart-input-placeholder-grey);
+}
+a.link-with-underline:hover {
+  opacity: 0.8;
+}
+#registracijos-forma a.link-with-underline {
+  padding-left: 33px;
 }
 
 #paskyra {
@@ -1203,6 +1218,42 @@ textarea.custom-input {
 
 #duk .accordion-body {
   padding: 16px 90px 40px 60px;
+}
+#paskyra .duomenys {
+  padding: 72px 40px;
+}
+#paskyra .duomenys,
+#paskyra .duomenys:before {
+  background: var(--main-section-grey);
+}
+#paskyra .tabs .nav-link.active {
+  background: var(--paskyra-btn-hover-green);
+}
+#paskyra .tabs .btn-small {
+  padding: 15px 12px;
+}
+#paskyra .tabs .btn-deep-purple:hover {
+  background: var(--paskyra-btn-hover-green);
+}
+#paskyra .tabs .btn-deep-purple:visited,
+#paskyra .tabs .btn-deep-purple:focus {
+  color: var(--white);
+}
+
+#paskyra .tab-content-wraper {
+  padding: 72px;
+  border-radius: 20px;
+  background: var(--main-section-grey);
+}
+
+#paskyra .mokymu-info-wraper {
+  padding: 30px;
+  background: var(--white);
+  border-radius: 10px;
+  border: 2px solid var(--cart-border-grey);
+}
+#paskyra form {
+  padding: 0;
 }
 
 /* Media queries */
@@ -1369,6 +1420,10 @@ textarea.custom-input {
   }
   #apie-kursus .content-wraper {
     padding-bottom: 160px;
+  }
+
+  #paskyra .tab-content-wraper {
+    padding: 72px 40px;
   }
 }
 @media (max-width: 768px) {
@@ -1622,6 +1677,13 @@ textarea.custom-input {
   }
   #duk-accordion .accordion-button:not(.collapsed)::after {
     padding-top: 0px;
+  }
+
+  #paskyra .w-50 {
+    width: 100% !important;
+  }
+  #paskyra .mokymu-info p span:first-child {
+    font-weight: 600;
   }
 }
 
@@ -1895,6 +1957,9 @@ textarea.custom-input {
   #registracijos-forma .btn-small {
     font-size: 16px;
   }
+  #registracijos-forma a.link-with-underline {
+    padding-left: 0;
+  }
   #duk {
     padding-bottom: 80px;
   }
@@ -1911,6 +1976,29 @@ textarea.custom-input {
   #duk-accordion .accordion-item:last-of-type .accordion-button.collapsed,
   #duk .accordion-body {
     padding: 16px 18px 16px 18px;
+  }
+  #paskyra {
+    padding-top: 0;
+  }
+  #paskyra .duomenys,
+  #paskyra .tab-content-wraper {
+    padding: 40px 28px;
+  }
+
+  #paskyra .tabs .btn-small {
+    font-size: 20px;
+  }
+  #paskyra h5.fs-40 {
+    font-size: 24px;
+  }
+  #paskyra .fs-32 {
+    font-size: 20px;
+  }
+  #paskyra .fs-20 {
+    font-size: 16px;
+  }
+  #paskyra .mokymu-info p span:first-child {
+    font-size: 20px;
   }
 }
 
