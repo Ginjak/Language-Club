@@ -186,6 +186,9 @@ ul {
 .max-w-780 {
   max-width: 780px;
 }
+.max-w-618 {
+  max-width: 618px;
+}
 .max-w-603 {
   max-width: 603px;
 }
@@ -605,6 +608,118 @@ ul {
 }
 
 /* Kodel mes section */
+
+#kodel-mes {
+  background: var(--main-section-grey);
+  padding: 60px 0 40px 0;
+  height: 820px;
+}
+
+#kodel-mes .qoute-top {
+  position: absolute;
+  top: -20px;
+  left: 12px;
+}
+#kodel-mes .qoute-down {
+  position: absolute;
+  bottom: -30px;
+  right: 12px;
+}
+#kodel-mes h2 {
+  color: var(--main-purple);
+}
+#kodel-mes .comment-wraper p {
+  color: var(--main-purple);
+}
+#kodel-mes .btn-comment {
+  padding: 30px;
+  width: 294px;
+  background: var(--main-green);
+}
+#kodel-mes .btn-comment::before {
+  height: 15px;
+  bottom: -14px;
+  background: var(--main-green);
+}
+#kodel-mes .comment-icon-wraper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--white);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 57px;
+  height: 57px;
+  border-radius: 10px;
+  border: 3px solid var(--main-purple);
+}
+
+#kodel-mes .gyvuoja-nuo.comment-wraper {
+  position: absolute;
+  top: 0;
+  left: 95px;
+}
+#kodel-mes .uzsienio-klubai.comment-wraper {
+  position: absolute;
+  top: 0;
+  right: 70px;
+}
+#kodel-mes .mokytojai.comment-wraper {
+  position: absolute;
+  top: 218px;
+  right: 25px;
+}
+#kodel-mes .valandu.comment-wraper {
+  position: absolute;
+  top: 518px;
+  right: 325px;
+}
+#kodel-mes .rekomendacijos.comment-wraper {
+  position: absolute;
+  top: 470px;
+  left: 300px;
+}
+#kodel-mes .vartotojai.comment-wraper {
+  position: absolute;
+  top: 255px;
+  left: 20px;
+}
+
+#kodel-mes .comments-swiper-wraper {
+  height: 355px;
+  width: 586px;
+  border-radius: 25px 25px 0 25px;
+  z-index: 10;
+}
+#kodel-mes .swiper-comments,
+#kodel-mes .swiper-slide {
+  height: 355px;
+  width: 586px;
+}
+#kodel-mes .swiper-slide {
+  padding-bottom: 39px;
+}
+
+#kodel-mes .comment-outline {
+  position: absolute;
+}
+#kodel-mes .swiper-button-prev {
+  top: auto;
+  left: auto;
+  right: 80px;
+  bottom: 50px;
+}
+#kodel-mes .swiper-button-next {
+  top: auto;
+  left: auto;
+  right: 40px;
+  bottom: 50px;
+}
+#kodel-mes .swiper-button-prev:after,
+#kodel-mes .swiper-button-next:after {
+  display: none;
+}
 
 /* Kreiptis orannge bar section */
 #kreiptis-orange-bar {

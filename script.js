@@ -73,6 +73,19 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
+
+    var commentSwiper = new Swiper("#comments-slider", {
+      loop: true,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   }
 
   // Kalbu pasirinkimas
