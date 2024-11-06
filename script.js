@@ -146,10 +146,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        isTimelineInView = entry.isIntersecting;
+        // Check if the full timeline is in view (100% visible)
+        isTimelineInView =
+          entry.isIntersecting && entry.intersectionRatio === 1;
       });
     },
-    { threshold: 0.1 }
+    { threshold: 1.0 } // The item is in view when it is fully visible
   );
 
   observer.observe(timeline);
