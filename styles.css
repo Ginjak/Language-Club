@@ -614,6 +614,9 @@ ul {
   padding: 60px 0 40px 0;
   height: 820px;
 }
+#kodel-mes .container-xxl {
+  height: 100%;
+}
 
 #kodel-mes .qoute-top {
   position: absolute;
@@ -622,7 +625,7 @@ ul {
 }
 #kodel-mes .qoute-down {
   position: absolute;
-  bottom: -30px;
+  bottom: -10px;
   right: 12px;
 }
 #kodel-mes h2 {
@@ -664,6 +667,7 @@ ul {
   position: absolute;
   top: 0;
   right: 70px;
+  z-index: 11;
 }
 #kodel-mes .mokytojai.comment-wraper {
   position: absolute;
@@ -673,12 +677,13 @@ ul {
 #kodel-mes .valandu.comment-wraper {
   position: absolute;
   top: 518px;
-  right: 325px;
+  right: 305px;
 }
 #kodel-mes .rekomendacijos.comment-wraper {
   position: absolute;
   top: 470px;
   left: 300px;
+  z-index: 11;
 }
 #kodel-mes .vartotojai.comment-wraper {
   position: absolute;
@@ -688,14 +693,15 @@ ul {
 
 #kodel-mes .comments-swiper-wraper {
   height: 355px;
-  width: 586px;
-  border-radius: 25px 25px 0 25px;
+  width: 577px;
+  border-radius: 30px 30px 0 30px;
   z-index: 10;
+  background: var(--main-section-grey);
 }
 #kodel-mes .swiper-comments,
 #kodel-mes .swiper-slide {
   height: 355px;
-  width: 586px;
+  width: 577px;
 }
 #kodel-mes .swiper-slide {
   padding-bottom: 39px;
@@ -1383,6 +1389,9 @@ a.link-with-underline:hover {
   #cart .container-xxl.message {
     padding: 0;
   }
+  #kodel-mes h2 {
+    font-size: 80px;
+  }
 }
 @media (max-width: 1200px) {
   #middle-nav .logo-wraper img {
@@ -1435,6 +1444,48 @@ a.link-with-underline:hover {
   .tab-content-txt-wraper p span:first-child {
     font-weight: 700;
     font-size: 18px;
+  }
+  #kodel-mes {
+    height: 720px;
+  }
+  #kodel-mes .btn-comment {
+    width: 244px;
+  }
+  #kodel-mes .btn-comment .fs-48 {
+    font-size: 30px;
+  }
+  #kodel-mes .btn-comment .fs-24 {
+    font-size: 16px;
+  }
+  #kodel-mes .btn-comment .fs-20 {
+    font-size: 14px;
+  }
+  #kodel-mes h2 {
+    font-size: 60px;
+  }
+
+  #kodel-mes .mokytojai.comment-wraper {
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    z-index: 11;
+  }
+  #kodel-mes .vartotojai.comment-wraper {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    z-index: 11;
+  }
+  #kodel-mes .rekomendacijos.comment-wraper {
+    position: absolute;
+    top: 420px;
+    left: 200px;
+    z-index: 11;
+  }
+  #kodel-mes .valandu.comment-wraper {
+    position: absolute;
+    top: 470px;
+    right: 225px;
   }
 }
 @media (max-width: 1100px) {
@@ -1540,6 +1591,50 @@ a.link-with-underline:hover {
   #paskyra .tab-content-wraper {
     padding: 72px 40px;
   }
+
+  #kodel-mes {
+    height: 720px;
+    padding-bottom: 100px;
+  }
+
+  #kodel-mes .btn-comment {
+    width: 244px;
+  }
+  #kodel-mes .btn-comment .fs-48 {
+    font-size: 30px;
+  }
+  #kodel-mes .btn-comment .fs-24 {
+    font-size: 16px;
+  }
+  #kodel-mes .btn-comment .fs-20 {
+    font-size: 14px;
+  }
+  #kodel-mes h2 {
+    font-size: 60px;
+  }
+  #kodel-mes {
+    height: auto;
+  }
+
+  #kodel-mes .vartotojai.comment-wraper,
+  #kodel-mes .rekomendacijos.comment-wraper,
+  #kodel-mes .gyvuoja-nuo.comment-wraper {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  #kodel-mes .uzsienio-klubai.comment-wraper,
+  #kodel-mes .mokytojai.comment-wraper,
+  #kodel-mes .valandu.comment-wraper {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  #kodel-mes .qoute-down {
+    z-index: 12;
+    bottom: -80px;
+  }
 }
 @media (max-width: 768px) {
   #middle-nav .logo-wraper img {
@@ -1635,6 +1730,14 @@ a.link-with-underline:hover {
   #musu-klientai .fs-80 {
     font-size: 60px;
   }
+
+  #musu-paslaugos img.txt-highlight-img {
+    position: absolute;
+    left: -10px;
+    bottom: -30px;
+    width: 276px;
+  }
+
   #musu-klientai .musu-klientai-banner .txt-highlight img {
     left: -36px;
     top: -36px;
@@ -1799,6 +1902,53 @@ a.link-with-underline:hover {
   }
   #paskyra .mokymu-info p span:first-child {
     font-weight: 600;
+  }
+  #kodel-mes .comments-swiper-wraper .bottom-style {
+    position: absolute;
+    height: 10px;
+    background: var(--main-section-grey);
+    width: 10px;
+    right: 0;
+    bottom: 19px;
+    z-index: 11;
+  }
+  #kodel-mes .comments-swiper-wraper.max-w-618 {
+    max-width: 100%;
+  }
+
+  #kodel-mes .swiper-comments,
+  #kodel-mes .swiper-slide {
+    height: 300px;
+    width: auto;
+  }
+
+  #kodel-mes .swiper-comments {
+    border: 6px solid var(--main-orange);
+    border-radius: 25px 25px 0 25px;
+  }
+  #kodel-mes .swiper-comments:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 20px;
+    border: 18px solid;
+    border-color: var(--main-orange) var(--main-orange) transparent transparent;
+  }
+  #kodel-mes .swiper-comments:after {
+    content: "";
+    position: absolute;
+    border: 13px solid;
+    right: 6px;
+    border-color: var(--main-section-grey) var(--main-section-grey) transparent
+      transparent;
+  }
+  #kodel-mes .swiper-button-prev {
+    bottom: 80px;
+  }
+  #kodel-mes .swiper-button-next {
+    bottom: 80px;
   }
 }
 
@@ -2115,10 +2265,95 @@ a.link-with-underline:hover {
   #paskyra .mokymu-info p span:first-child {
     font-size: 20px;
   }
+  #kodel-mes {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  #kodel-mes .comments-swiper-wraper .bottom-style {
+    bottom: 5px;
+  }
+  #kodel-mes .qoute-top,
+  #kodel-mes .qoute-down {
+    max-width: 30px;
+  }
+  #kodel-mes .qoute-top {
+    top: 0px;
+  }
+  #kodel-mes .qoute-down {
+    bottom: -50px;
+  }
+  #kodel-mes h2.fs-96 {
+    font-size: 48px;
+  }
+  #kodel-mes .swiper-slide,
+  #kodel-mes .swiper-comments {
+    height: 260px;
+  }
+  #kodel-mes .comments-swiper-wraper {
+    height: 300px;
+  }
+  #kodel-mes .swiper-slide p.fs-20 {
+    font-size: 16px;
+  }
+  #kodel-mes .swiper-comments:before {
+    bottom: 5px;
+  }
+  #kodel-mes .swiper-button-prev,
+  #kodel-mes .swiper-button-next {
+    bottom: 50px;
+  }
+  #kodel-mes .swiper-button-prev {
+    right: auto;
+    left: 40px;
+  }
+  #kodel-mes .btn-comment {
+    padding: 16px 12px;
+    width: 169px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #kodel-mes .comment-wraper .fs-48 {
+    font-size: 24px;
+  }
+  #kodel-mes .btn-comment .fs-24 {
+    font-size: 15px;
+  }
+  #kodel-mes .btn-comment .fs-20 {
+    font-size: 12px;
+  }
+  #kodel-mes .comment-icon-wraper {
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+  }
+  #kodel-mes .comment-icon-wraper img {
+    width: 100%;
+  }
 }
 
+@media (max-width: 400px) {
+  #kodel-mes .comments-small-wraper {
+    justify-content: space-between !important;
+    gap: 0 !important;
+  }
+  #kodel-mes .comment-wraper {
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 380px) {
   #cart .item-name {
     max-width: 175px;
+  }
+}
+@media (max-width: 363px) {
+  #kodel-mes .comment-wraper,
+  #kodel-mes .btn-comment {
+    width: 100%;
+  }
+  #kodel-mes .btn-comment {
+    padding: 20px;
+    margin-bottom: 25px;
   }
 }
