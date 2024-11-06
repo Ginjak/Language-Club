@@ -141,34 +141,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const timeline = document.querySelector(".timeline");
-  const timelineContainer = document.querySelector(".timeline-container");
   let isTimelineInView = false;
-  let startX = 0;
-  let scrollLeft = 0;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const viewportHeight = window.innerHeight;
-        const entryTop = entry.boundingClientRect.top;
-        const entryBottom = entry.boundingClientRect.bottom;
-
-        if (
-          entry.isIntersecting &&
-          entryTop >= 0 &&
-          entryBottom <= viewportHeight + 400
-        ) {
-          isTimelineInView = true;
-        } else {
-          isTimelineInView = false;
-        }
+        isTimelineInView = entry.isIntersecting;
       });
     },
     { threshold: 0.1 }
   );
 
-  observer.observe(timelineContainer);
+  observer.observe(timeline);
 
+  // Handle mouse wheel scrolling
   window.addEventListener(
     "wheel",
     (e) => {
@@ -182,19 +168,32 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: false }
   );
 
-  // Touch events for mobile devices
-  timeline.addEventListener("touchstart", (e) => {
-    if (isTimelineInView) {
-      startX = e.touches[0].pageX - timeline.offsetLeft;
-      scrollLeft = timeline.scrollLeft;
-    }
-  });
+  // Handle touch scrolling for mobile devices
+  let touchStartX = 0;
 
-  timeline.addEventListener("touchmove", (e) => {
-    if (isTimelineInView) {
-      const x = e.touches[0].pageX - timeline.offsetLeft;
-      const walk = x - startX;
-      timeline.scrollLeft = scrollLeft - walk;
-    }
-  });
+  window.addEventListener(
+    "touchstart",
+    (e) => {
+      if (isTimelineInView) {
+        touchStartX = e.touches[0].pageX;
+      }
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "touchmove",
+    (e) => {
+      if (isTimelineInView) {
+        const touchMoveX = e.touches[0].pageX;
+        const deltaX = touchStartX - touchMoveX;
+
+        if (timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth) {
+          e.preventDefault();
+          timeline.scrollLeft += deltaX;
+        }
+      }
+    },
+    { passive: false }
+  );
 });
