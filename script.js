@@ -143,15 +143,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const timeline = document.querySelector(".timeline");
   let isTimelineInView = false;
 
+  // Set up the IntersectionObserver to detect when the timeline is in view (even partially)
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        // Check if the full timeline is in view (100% visible)
-        isTimelineInView =
-          entry.isIntersecting && entry.intersectionRatio === 1;
+        // Check if the timeline is partially visible
+        isTimelineInView = entry.isIntersecting;
       });
     },
-    { threshold: 1.0 } // The item is in view when it is fully visible
+    { threshold: 0.1 } // Trigger when 10% of the element is visible
   );
 
   observer.observe(timeline);
@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "wheel",
     (e) => {
       if (isTimelineInView && e.deltaY !== 0) {
+        // Allow scrolling if the timeline is not fully scrolled to the end
         if (timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth) {
           e.preventDefault();
           timeline.scrollLeft += e.deltaY;
@@ -190,6 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const touchMoveX = e.touches[0].pageX;
         const deltaX = touchStartX - touchMoveX;
 
+        // Allow scrolling if the timeline is not fully scrolled to the end
         if (timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth) {
           e.preventDefault();
           timeline.scrollLeft += deltaX;
@@ -216,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const mouseMoveX = e.pageX;
       const deltaX = mouseStartX - mouseMoveX;
 
-      // Ensure that we don't scroll beyond the boundaries of the content
+      // Allow scrolling even when the timeline is not fully scrolled to the end
       if (
         timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth ||
         deltaX < 0
