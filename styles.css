@@ -1064,7 +1064,8 @@ footer ul a {
   color: var(--main-purple);
 }
 #svarbi-info .timeline p {
-  white-space: wrap;
+  white-space: wrap !important;
+  display: block !important;
 }
 #svarbi-info .timeline-item {
   flex: 0 0 auto;
@@ -1073,7 +1074,6 @@ footer ul a {
   background-color: var(--white);
   border-radius: 25px 25px 0 25px;
   border: 6px solid var(--main-ligth-orange);
-
   position: relative;
 }
 #svarbi-info .timeline-item:before {
