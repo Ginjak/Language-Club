@@ -141,18 +141,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const timeline = document.querySelector(".timeline");
+  const timelineContainer = document.querySelector(".timeline-container");
   let isTimelineInView = false;
+  let startX = 0;
+  let scrollLeft = 0;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        isTimelineInView = entry.isIntersecting;
+        const viewportHeight = window.innerHeight;
+        const entryTop = entry.boundingClientRect.top;
+        const entryBottom = entry.boundingClientRect.bottom;
+
+        if (
+          entry.isIntersecting &&
+          entryTop >= 0 &&
+          entryBottom <= viewportHeight + 400
+        ) {
+          isTimelineInView = true;
+        } else {
+          isTimelineInView = false;
+        }
       });
     },
     { threshold: 0.1 }
   );
 
-  observer.observe(timeline);
+  observer.observe(timelineContainer);
 
   window.addEventListener(
     "wheel",
@@ -166,4 +181,20 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { passive: false }
   );
+
+  // Touch events for mobile devices
+  timeline.addEventListener("touchstart", (e) => {
+    if (isTimelineInView) {
+      startX = e.touches[0].pageX - timeline.offsetLeft;
+      scrollLeft = timeline.scrollLeft;
+    }
+  });
+
+  timeline.addEventListener("touchmove", (e) => {
+    if (isTimelineInView) {
+      const x = e.touches[0].pageX - timeline.offsetLeft;
+      const walk = x - startX;
+      timeline.scrollLeft = scrollLeft - walk;
+    }
+  });
 });
