@@ -218,39 +218,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // Handle touch scrolling for mobile devices (disabled on mobile)
-  if (!isDesktop) {
-    let touchStartX = 0;
-
-    window.addEventListener(
-      "touchstart",
-      (e) => {
-        if (isTimelineInView) {
-          touchStartX = e.touches[0].pageX;
-        }
-      },
-      { passive: true }
-    );
-
-    window.addEventListener(
-      "touchmove",
-      (e) => {
-        if (isTimelineInView) {
-          const touchMoveX = e.touches[0].pageX;
-          const deltaX = touchStartX - touchMoveX;
-
-          // Allow scrolling if the timeline is not fully scrolled to the end
-          if (
-            timeline.scrollLeft + timeline.clientWidth <
-            timeline.scrollWidth
-          ) {
-            e.preventDefault();
-            timeline.scrollLeft += deltaX;
-          }
-        }
-      },
-      { passive: false }
-    );
-  }
 });
