@@ -1027,6 +1027,7 @@ footer ul a {
 /* Svarbi informacija section */
 #svarbi-info {
   padding-top: 60px;
+  padding-bottom: 40px;
 }
 #svarbi-info .qoute-grey {
   position: absolute;
@@ -1038,6 +1039,70 @@ footer ul a {
   color: #8860a4;
   margin-left: 60px;
 }
+
+#svarbi-info .half-gradient {
+  position: absolute;
+  bottom: 0;
+  height: 45%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(101, 214, 203, 0.2), #65d6cb);
+}
+#svarbi-info .timeline {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#svarbi-info .timeline::-webkit-scrollbar {
+  display: none;
+}
+#svarbi-info .timeline h5 {
+  color: var(--main-purple);
+}
+#svarbi-info .timeline p {
+  white-space: wrap;
+}
+#svarbi-info .timeline-item {
+  flex: 0 0 auto;
+  width: 438px;
+  margin-right: 20px;
+  background-color: var(--white);
+  border-radius: 25px 25px 0 25px;
+  border: 6px solid var(--main-ligth-orange);
+
+  position: relative;
+}
+#svarbi-info .timeline-item:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -6px;
+  bottom: -36px;
+  border: 18px solid;
+  border-color: var(--main-orange) var(--main-orange) transparent transparent;
+}
+#svarbi-info .timeline-item:after {
+  content: "";
+  position: absolute;
+  border: 13px solid;
+  right: 0px;
+  bottom: -20px;
+  border-color: var(--white) var(--white) transparent transparent;
+}
+
+#svarbi-info .timeline-content {
+  padding: 30px;
+}
+
+#svarbi-info .timeline-item:last-child {
+  margin-right: 0;
+}
+
 /* Apie kursus section */
 #apie-kursus {
   padding-top: 60px;
@@ -2125,7 +2190,20 @@ a.link-with-underline:hover {
     max-width: 28px;
     top: -25px;
   }
+  #svarbi-info .timeline-item {
+    max-width: 379px;
+    width: 100%;
+  }
+  #svarbi-info .timeline {
+    padding: 20px 10px;
+  }
+  #svarbi-info .timeline-content {
+    padding: 30px 20px;
+  }
 
+  #svarbi-info .timeline-item .fs-24 {
+    font-size: 16px;
+  }
   #apie-kursus .btn-comment {
     padding: 24px;
   }
@@ -2370,7 +2448,12 @@ a.link-with-underline:hover {
     width: 100%;
   }
 }
-
+@media (max-width: 450px) {
+  #svarbi-info .timeline-item {
+    width: 100%;
+    max-width: 438px;
+  }
+}
 @media (max-width: 400px) {
   #kodel-mes .comments-small-wraper {
     justify-content: space-between !important;
@@ -2394,38 +2477,4 @@ a.link-with-underline:hover {
     padding: 20px;
     margin-bottom: 25px;
   }
-}
-
-.timeline {
-  display: flex;
-  overflow-x: auto;
-  padding: 20px;
-  white-space: nowrap;
-}
-
-.timeline-item {
-  flex: 0 0 auto;
-  width: 200px;
-  margin-right: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  padding: 10px;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: attr(data-date);
-  position: absolute;
-  top: -20px;
-  left: 10px;
-  font-size: 14px;
-  color: #666;
-}
-
-.timeline-content {
-  text-align: center;
-}
-
-.timeline-item:last-child {
-  margin-right: 0;
 }

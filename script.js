@@ -196,4 +196,44 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { passive: false }
   );
+
+  // Handle mouse drag scrolling on large screens (click and hold)
+  let isDragging = false;
+  let mouseStartX = 0;
+
+  timeline.addEventListener("mousedown", (e) => {
+    if (isTimelineInView) {
+      isDragging = true;
+      mouseStartX = e.pageX;
+      timeline.style.cursor = "grabbing"; // Change cursor to indicate dragging
+    }
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      const mouseMoveX = e.pageX;
+      const deltaX = mouseStartX - mouseMoveX;
+
+      // Ensure that we don't scroll beyond the boundaries of the content
+      if (
+        timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth ||
+        deltaX < 0
+      ) {
+        timeline.scrollLeft += deltaX;
+        mouseStartX = mouseMoveX; // Update starting point to continue dragging
+      }
+    }
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+    timeline.style.cursor = "grab"; // Change cursor back to default
+  });
+
+  // Prevent text selection during drag (for a smoother experience)
+  window.addEventListener("selectstart", (e) => {
+    if (isDragging) {
+      e.preventDefault();
+    }
+  });
 });
