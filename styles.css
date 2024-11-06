@@ -130,6 +130,9 @@ ul {
 .fs-65 {
   font-size: 65px;
 }
+.fs-64 {
+  font-size: 64px;
+}
 .fs-48 {
   font-size: 48px;
 }
@@ -1021,9 +1024,26 @@ footer ul a {
   padding: 20px 40px;
 }
 
+/* Svarbi informacija section */
+#svarbi-info {
+  padding-top: 60px;
+}
+#svarbi-info .qoute-grey {
+  position: absolute;
+  top: 0;
+  left: 12px;
+}
+
+#svarbi-info h2 {
+  color: #8860a4;
+  margin-left: 60px;
+}
 /* Apie kursus section */
+#apie-kursus {
+  padding-top: 60px;
+}
 #apie-kursus .content-wraper {
-  padding-bottom: 55px;
+  padding-bottom: 60px;
 }
 #apie-kursus .nemokas-testas {
   margin-bottom: 135px !important;
@@ -1832,6 +1852,12 @@ a.link-with-underline:hover {
   #posts .btn-small.fw-bold {
     font-weight: 500 !important;
   }
+  #svarbi-info {
+    padding-top: 20px;
+  }
+  #svarbi-info h2.fs-64 {
+    font-size: 50px;
+  }
   #apie-kursus .nemokas-testas {
     margin-bottom: 80px !important;
   }
@@ -2088,6 +2114,18 @@ a.link-with-underline:hover {
   .category.p-28 {
     padding: 20px;
   }
+  #svarbi-info {
+    padding-top: 40px;
+  }
+  #svarbi-info h2.fs-64 {
+    font-size: 32px;
+    margin-left: 16px;
+  }
+  #svarbi-info .qoute-grey {
+    max-width: 28px;
+    top: -25px;
+  }
+
   #apie-kursus .btn-comment {
     padding: 24px;
   }
@@ -2356,4 +2394,38 @@ a.link-with-underline:hover {
     padding: 20px;
     margin-bottom: 25px;
   }
+}
+
+.timeline {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.timeline-item {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: attr(data-date);
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-content {
+  text-align: center;
+}
+
+.timeline-item:last-child {
+  margin-right: 0;
 }

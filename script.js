@@ -138,3 +138,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const timeline = document.querySelector(".timeline");
+  let isTimelineInView = false;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        isTimelineInView = entry.isIntersecting;
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(timeline);
+
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      if (isTimelineInView && e.deltaY !== 0) {
+        if (timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth) {
+          e.preventDefault();
+          timeline.scrollLeft += e.deltaY;
+        }
+      }
+    },
+    { passive: false }
+  );
+});
