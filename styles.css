@@ -1049,7 +1049,7 @@ footer ul a {
 }
 #svarbi-info .timeline {
   display: flex;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   padding: 20px;
   white-space: nowrap;
   overflow-y: hidden;
