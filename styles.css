@@ -1064,7 +1064,7 @@ footer ul a {
   color: var(--main-purple);
 }
 #svarbi-info .timeline p {
-  white-space: wrap !important;
+  white-space: normal !important;
   display: block !important;
 }
 #svarbi-info .timeline-item {
