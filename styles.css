@@ -1053,7 +1053,7 @@ footer ul a {
   padding: 20px;
   white-space: nowrap;
   overflow-y: hidden;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
