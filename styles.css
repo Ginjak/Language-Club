@@ -1049,11 +1049,9 @@ footer ul a {
 }
 #svarbi-info .timeline {
   display: flex;
-  /* overflow-x: auto; */
   padding: 20px;
   white-space: nowrap;
   overflow-y: hidden;
-  /* overflow-x: scroll; */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -2203,6 +2201,10 @@ a.link-with-underline:hover {
 
   #svarbi-info .timeline-item .fs-24 {
     font-size: 16px;
+  }
+  #svarbi-info .timeline p {
+    white-space: normal !important;
+    word-break: break-word !important;
   }
   #apie-kursus .btn-comment {
     padding: 24px;
