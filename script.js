@@ -139,83 +139,120 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const timeline = document.querySelector(".timeline");
+//   let isTimelineInView = false;
+
+//   // Check if the device is desktop or mobile based on screen width
+//   const isDesktop = window.innerWidth >= 768;
+
+//   // Set up the IntersectionObserver to detect when the timeline is in view (even partially)
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         // Check if the timeline is partially visible
+//         isTimelineInView = entry.isIntersecting;
+//       });
+//     },
+//     { threshold: 0.1 } // Trigger when 10% of the element is visible
+//   );
+
+//   observer.observe(timeline);
+
+//   if (isDesktop) {
+//     // Handle mouse wheel scrolling for desktop
+//     window.addEventListener(
+//       "wheel",
+//       (e) => {
+//         if (isTimelineInView && e.deltaY !== 0) {
+//           // Allow scrolling if the timeline is not fully scrolled to the end
+//           if (
+//             timeline.scrollLeft + timeline.clientWidth <
+//             timeline.scrollWidth
+//           ) {
+//             e.preventDefault();
+//             timeline.scrollLeft += e.deltaY;
+//           }
+//         }
+//       },
+//       { passive: false }
+//     );
+
+//     // Handle mouse drag scrolling on desktop (click and hold)
+//     let isDragging = false;
+//     let mouseStartX = 0;
+
+//     timeline.addEventListener("mousedown", (e) => {
+//       if (isTimelineInView) {
+//         isDragging = true;
+//         mouseStartX = e.pageX;
+//         timeline.style.cursor = "grabbing"; // Change cursor to indicate dragging
+//       }
+//     });
+
+//     window.addEventListener("mousemove", (e) => {
+//       if (isDragging) {
+//         const mouseMoveX = e.pageX;
+//         const deltaX = mouseStartX - mouseMoveX;
+
+//         // Allow scrolling even when the timeline is not fully scrolled to the end
+//         if (
+//           timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth ||
+//           deltaX < 0
+//         ) {
+//           timeline.scrollLeft += deltaX;
+//           mouseStartX = mouseMoveX; // Update starting point to continue dragging
+//         }
+//       }
+//     });
+
+//     window.addEventListener("mouseup", () => {
+//       isDragging = false;
+//       timeline.style.cursor = "grab"; // Change cursor back to default
+//     });
+
+//     // Prevent text selection during drag (for a smoother experience)
+//     window.addEventListener("selectstart", (e) => {
+//       if (isDragging) {
+//         e.preventDefault();
+//       }
+//     });
+//   }
+// });
 document.addEventListener("DOMContentLoaded", () => {
-  const timeline = document.querySelector(".timeline");
-  let isTimelineInView = false;
+  const parentDiv = document.querySelector(".parent");
+  const scrollContainer = document.querySelector(".scroll-container");
+  const restOfPage = document.querySelector(".rest-of-page");
 
-  // Check if the device is desktop or mobile based on screen width
-  const isDesktop = window.innerWidth >= 768;
+  let scrollingProductDivs = true;
 
-  // Set up the IntersectionObserver to detect when the timeline is in view (even partially)
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        // Check if the timeline is partially visible
-        isTimelineInView = entry.isIntersecting;
-      });
-    },
-    { threshold: 0.1 } // Trigger when 10% of the element is visible
-  );
+  const handleScroll = (event) => {
+    if (scrollingProductDivs) {
+      parentDiv.scrollTop += event.deltaY;
 
-  observer.observe(timeline);
-
-  if (isDesktop) {
-    // Handle mouse wheel scrolling for desktop
-    window.addEventListener(
-      "wheel",
-      (e) => {
-        if (isTimelineInView && e.deltaY !== 0) {
-          // Allow scrolling if the timeline is not fully scrolled to the end
-          if (
-            timeline.scrollLeft + timeline.clientWidth <
-            timeline.scrollWidth
-          ) {
-            e.preventDefault();
-            timeline.scrollLeft += e.deltaY;
-          }
-        }
-      },
-      { passive: false }
-    );
-
-    // Handle mouse drag scrolling on desktop (click and hold)
-    let isDragging = false;
-    let mouseStartX = 0;
-
-    timeline.addEventListener("mousedown", (e) => {
-      if (isTimelineInView) {
-        isDragging = true;
-        mouseStartX = e.pageX;
-        timeline.style.cursor = "grabbing"; // Change cursor to indicate dragging
+      if (
+        parentDiv.scrollTop + parentDiv.clientHeight >=
+        parentDiv.scrollHeight
+      ) {
+        scrollingProductDivs = false;
+        parentDiv.scrollTop = parentDiv.scrollHeight - parentDiv.clientHeight;
+      } else if (parentDiv.scrollTop <= 0) {
+        parentDiv.scrollTop = 0;
       }
-    });
 
-    window.addEventListener("mousemove", (e) => {
-      if (isDragging) {
-        const mouseMoveX = e.pageX;
-        const deltaX = mouseStartX - mouseMoveX;
+      event.preventDefault();
+    }
+  };
 
-        // Allow scrolling even when the timeline is not fully scrolled to the end
-        if (
-          timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth ||
-          deltaX < 0
-        ) {
-          timeline.scrollLeft += deltaX;
-          mouseStartX = mouseMoveX; // Update starting point to continue dragging
-        }
-      }
-    });
+  window.addEventListener("scroll", () => {
+    const rect = scrollContainer.getBoundingClientRect();
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
 
-    window.addEventListener("mouseup", () => {
-      isDragging = false;
-      timeline.style.cursor = "grab"; // Change cursor back to default
-    });
+    if (rect.top >= 0 && rect.bottom <= windowHeight && window.scrollY === 0) {
+      scrollingProductDivs = true;
+    }
+  });
 
-    // Prevent text selection during drag (for a smoother experience)
-    window.addEventListener("selectstart", (e) => {
-      if (isDragging) {
-        e.preventDefault();
-      }
-    });
-  }
+  parentDiv.addEventListener("wheel", handleScroll);
 });

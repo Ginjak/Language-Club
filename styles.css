@@ -2483,3 +2483,21 @@ a.link-with-underline:hover {
     margin-bottom: 25px;
   }
 }
+.scroll-container {
+  height: 300px;
+}
+.parent {
+  height: 250px; /* Adjust to the height of one product div */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product {
+  height: 200px; /* Same as the parent div height */
+  /* Other styling for the product div */
+  background: green;
+  flex: 0 0 auto;
+}
