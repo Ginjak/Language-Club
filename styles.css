@@ -1054,13 +1054,17 @@ footer ul a {
   display: flex;
   padding: 20px;
   white-space: nowrap;
-  overflow-y: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar in IE */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  cursor: grab; /* Show a grab cursor when hovering */
 }
+
 #svarbi-info .timeline::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hide scrollbar in Webkit browsers (Chrome, Safari) */
 }
+
 #svarbi-info .timeline h5 {
   color: var(--main-purple);
 }
