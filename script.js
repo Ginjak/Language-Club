@@ -138,3 +138,131 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const timeline = document.querySelector(".timeline");
+  let isTimelineInView = false;
+
+  // Check if the device is desktop or mobile based on screen width
+  const isDesktop = window.innerWidth >= 768;
+
+  // Set up the IntersectionObserver to detect when the timeline is in view (even partially)
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        isTimelineInView = entry.isIntersecting;
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(timeline);
+
+  // Handle mouse wheel scrolling for desktop
+  if (isDesktop) {
+    window.addEventListener(
+      "wheel",
+      (e) => {
+        if (isTimelineInView && e.deltaY !== 0) {
+          // Allow scrolling if the timeline is not fully scrolled to the end
+          if (
+            timeline.scrollLeft + timeline.clientWidth <
+            timeline.scrollWidth
+          ) {
+            e.preventDefault();
+            timeline.scrollLeft += e.deltaY;
+          } else {
+            // When timeline is fully scrolled, allow page scrolling
+            return;
+          }
+        }
+      },
+      { passive: false }
+    );
+  }
+
+  // Handle touch scrolling for mobile devices
+  if (!isDesktop) {
+    let touchStartX = 0;
+
+    window.addEventListener(
+      "touchstart",
+      (e) => {
+        if (isTimelineInView) {
+          touchStartX = e.touches[0].pageX;
+        }
+      },
+      { passive: true }
+    );
+
+    window.addEventListener(
+      "touchmove",
+      (e) => {
+        if (isTimelineInView) {
+          const touchMoveX = e.touches[0].pageX;
+          const deltaX = touchStartX - touchMoveX;
+          // Allow scrolling if the timeline is not fully scrolled to the end
+          if (
+            timeline.scrollLeft + timeline.clientWidth <
+            timeline.scrollWidth
+          ) {
+            e.preventDefault();
+            timeline.scrollLeft += deltaX;
+          } else {
+            // Allow page scroll if the timeline is fully scrolled
+            return;
+          }
+        }
+      },
+      { passive: false }
+    );
+  }
+
+  // Handle mouse drag scrolling for desktop (click and hold)
+  let isDragging = false;
+  let mouseStartX = 0;
+
+  timeline.addEventListener("mousedown", (e) => {
+    if (isTimelineInView) {
+      isDragging = true;
+      mouseStartX = e.pageX;
+      timeline.style.cursor = "grabbing"; // Change cursor to indicate dragging
+    }
+  });
+
+  window.addEventListener(
+    "mousemove",
+    (e) => {
+      if (isDragging) {
+        const mouseMoveX = e.pageX;
+        const deltaX = mouseStartX - mouseMoveX;
+
+        // Allow scrolling even when the timeline is not fully scrolled to the end
+        if (
+          timeline.scrollLeft + timeline.clientWidth < timeline.scrollWidth ||
+          deltaX < 0
+        ) {
+          e.preventDefault();
+          timeline.scrollLeft += deltaX;
+          mouseStartX = mouseMoveX; // Update starting point to continue dragging
+        } else {
+          // Allow page scroll when the timeline is fully scrolled
+          return;
+        }
+      }
+    },
+    { passive: false }
+  );
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+    timeline.style.cursor = "grab"; // Change cursor back to default
+  });
+
+  // Prevent text selection during drag for smoother experience
+  window.addEventListener("selectstart", (e) => {
+    if (isDragging) {
+      e.preventDefault();
+    }
+  });
+});
